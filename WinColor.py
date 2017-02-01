@@ -88,37 +88,37 @@ def get_csbi_attributes(handle):
 #~ Método Que Indica En Donde Iniciará El Color.
 def ColorI(ColorLetra):
 	
-	if ColorLetra == "0" or ColorLetra == "negro" or ColorLetra == "N" :
+	if ColorLetra == "x0" or ColorLetra == "negro" or ColorLetra == "N" :
 		Color = x0
-	elif ColorLetra == "1" or ColorLetra == "azul" or ColorLetra == "A" :
+	elif ColorLetra == "x1" or ColorLetra == "azul" or ColorLetra == "AZ" :
 		Color = x1
-	elif ColorLetra == "2" or ColorLetra == "verde" or ColorLetra == "V" :
+	elif ColorLetra == "x2" or ColorLetra == "verde" or ColorLetra == "V" :
 		Color = x2
-	elif ColorLetra == "3" or ColorLetra == "aguamarina" or ColorLetra == "AM" :
+	elif ColorLetra == "x3" or ColorLetra == "aguamarina" or ColorLetra == "AG" :
 		Color = x3
-	elif ColorLetra == "4" or ColorLetra == "rojo" or ColorLetra == "R" :
+	elif ColorLetra == "x4" or ColorLetra == "rojo" or ColorLetra == "R" :
 		Color = x4
-	elif ColorLetra == "5" or ColorLetra == "purpura" or ColorLetra == "P" :
+	elif ColorLetra == "x5" or ColorLetra == "purpura" or ColorLetra == "P" :
 		Color = x5
-	elif ColorLetra == "6" or ColorLetra == "amarillo" or ColorLetra == "A" :
+	elif ColorLetra == "x6" or ColorLetra == "amarillo" or ColorLetra == "AM" :
 		Color = x6
-	elif ColorLetra == "7" or ColorLetra == "blanco" or ColorLetra == "B" :
+	elif ColorLetra == "x7" or ColorLetra == "blanco" or ColorLetra == "B" :
 		Color = x7
-	elif ColorLetra == "8" or ColorLetra == "gris" or ColorLetra == "G" :
+	elif ColorLetra == "x8" or ColorLetra == "gris" or ColorLetra == "G" :
 		Color = x8
-	elif ColorLetra == "9" or ColorLetra == "azul cl" or ColorLetra == "AC" :
+	elif ColorLetra == "x9" or ColorLetra == "azul cl" or ColorLetra == "AC" :
 		Color = x9
-	elif ColorLetra == "A" or ColorLetra == "verde cl" or ColorLetra == "VC" :
+	elif ColorLetra == "xA" or ColorLetra == "verde cl" or ColorLetra == "VC" :
 		Color = xA
-	elif ColorLetra == "B" or ColorLetra == "aguamarina cl" or ColorLetra == "AMC" :
+	elif ColorLetra == "xB" or ColorLetra == "aguamarina cl" or ColorLetra == "AMC" :
 		Color = xB
-	elif ColorLetra == "C" or ColorLetra == "rojo cl" or ColorLetra == "RC" :
+	elif ColorLetra == "xC" or ColorLetra == "rojo cl" or ColorLetra == "RC" :
 		Color = xC
-	elif ColorLetra == "D" or ColorLetra == "purpura cl" or ColorLetra == "PC" :
+	elif ColorLetra == "xD" or ColorLetra == "purpura cl" or ColorLetra == "PC" :
 		Color = xD
-	elif ColorLetra == "E" or ColorLetra == "amarillo cl" or ColorLetra == "AC" :
+	elif ColorLetra == "xE" or ColorLetra == "amarillo cl" or ColorLetra == "AC" :
 		Color = xE
-	elif ColorLetra == "F" or ColorLetra == "blanco br" or ColorLetra == "BB" :
+	elif ColorLetra == "xF" or ColorLetra == "blanco br" or ColorLetra == "BB" :
 		Color = xF
 	else:
 		Color = reset
