@@ -3,7 +3,7 @@ import ctypes
 #~ Constantes de la API de Windows.
 STD_OUTPUT_HANDLE = -11
 
-color = 0x000F # Color Blanco Brillante.
+F = 0x000F # Color Blanco Brillante.
 
 #~ Método que reinicia al color original
 def get_csbi_attributes(handle):
@@ -22,4 +22,16 @@ def get_csbi_attributes(handle):
 handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
 reset = get_csbi_attributes(handle)
 
+#~ Método Que Indica En Donde Iniciará El Color.
+def ColorI(Fondo):
+	colorI = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, Fondo)
+	return colorI
 
+#~ Método Que Indica En Donde Terminará El Color.
+def ColorF():
+	colorF = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, reset)
+	return colorF
+
+ColorI(F)
+print("\n\n\t Texto De Ejemplo.")
+ColorF()
