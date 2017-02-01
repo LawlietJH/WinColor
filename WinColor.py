@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.0.2
+#                                                                 1.0.3
 
 import ctypes, os
 
@@ -41,8 +41,8 @@ def Dat():
 	       os.system("Pause>Nul"), exit(0)
 
 #________________________________________________________________________
-
 #________________________________________________________________________
+
 #~ Constantes de la API de Windows.
 STD_OUTPUT_HANDLE = -11
 
@@ -102,17 +102,17 @@ def ColorI(ColorLetra):
 		Color = x7
 	elif ColorLetra == "x8" or ColorLetra == "gris" or ColorLetra == "G" :
 		Color = x8
-	elif ColorLetra == "x9" or ColorLetra == "azul cl" or ColorLetra == "AC" :
+	elif ColorLetra == "x9" or ColorLetra == "azul cl" or ColorLetra == "AZC" :
 		Color = x9
 	elif ColorLetra == "xA" or ColorLetra == "verde cl" or ColorLetra == "VC" :
 		Color = xA
-	elif ColorLetra == "xB" or ColorLetra == "aguamarina cl" or ColorLetra == "AMC" :
+	elif ColorLetra == "xB" or ColorLetra == "aguamarina cl" or ColorLetra == "AGC" :
 		Color = xB
 	elif ColorLetra == "xC" or ColorLetra == "rojo cl" or ColorLetra == "RC" :
 		Color = xC
 	elif ColorLetra == "xD" or ColorLetra == "purpura cl" or ColorLetra == "PC" :
 		Color = xD
-	elif ColorLetra == "xE" or ColorLetra == "amarillo cl" or ColorLetra == "AC" :
+	elif ColorLetra == "xE" or ColorLetra == "amarillo cl" or ColorLetra == "AMC" :
 		Color = xE
 	elif ColorLetra == "xF" or ColorLetra == "blanco br" or ColorLetra == "BB" :
 		Color = xF
