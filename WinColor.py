@@ -14,6 +14,16 @@
 
 import ctypes, os
 
+BA_1 = r" (  (                    (         (            "
+BA_2 = r" )\))(  ' (              )\        )\      (    "
+BA_3 = r"((_)()\ ) )\    (      (((_)   (  ((_) (   )(   "
+BA_4 = r"_(())\_)(((_)   )\ )   )\___   )\  _   )\ (()\  "
+BA_5 = r"\ \((_)/ /(_)  _(_/(  ((/ __| ((_)| | ((_)((_)  "
+BA_6 = r" \ \/\/ / | | | ' \))  | (__ / _ \| |/ _ \| '_| "
+BA_7 = r"  \_/\_/  |_| |_||_|    \___|\___/|_|\___/|_|   "
+
+
+
 BWC = r"""
                        ╦ ╦  ┬  ┌┐┌   ╔═╗ ┌─┐ ┬   ┌─┐ ┬─┐
                        ║║║  │  │││   ║   │ │ │   │ │ ├┬┘
@@ -22,30 +32,24 @@ BWC = r"""
 #~ Fuente: Calvin S, Página: http://patorjk.com/software/taag
 
 BA = r"""
-                            ╦  ┌─┐┬ ┬┬  ┬┌─┐┌┬┐ ╦╦ ╦
-                            ║  ├─┤││││  │├┤  │  ║╠═╣
-                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴ ╚╝╩ ╩
+                            ╦  ┌─┐┬ ┬┬  ┬┌─┐┌┬┐╦╦ ╦
+                            ║  ├─┤││││  │├┤  │ ║╠═╣
+                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴╚╝╩ ╩
 """
+
 #~ Fuente: Calvin S, Página: http://patorjk.com/software/taag
 
 def Dat():
-	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n{:^80}".format("1.0.3")
+	Version = "\n\n{:^80}".format("1.0.2")
 	
-	return os.system("cls"),\
-	       ColorI("BB"), print("\n\n",Nombre),\
-	       ColorI("AZ"), print("\n\n",Autor),\
-	       ColorI("RC"), print(Version), ColorF(),\
-	       os.system("Pause>Nul"), exit(0)
+	return ColorI("xF"), print("\n\n",Nombre),\
+	       ColorI("xB"), print("\n\n",Autor),\
+	       ColorI("xC"), print(Version), ColorF()
 
-#________________________________________________________________________
-
-#________________________________________________________________________
 #~ Constantes de la API de Windows.
 STD_OUTPUT_HANDLE = -11
-
 #_______________ Colores _______________
 
 x0   = 0x0000   # Color Negro.
@@ -84,37 +88,37 @@ def get_csbi_attributes(handle):
 #~ Método Que Indica En Donde Iniciará El Color.
 def ColorI(ColorLetra):
 	
-	if ColorLetra == "x0" or ColorLetra == "negro" or ColorLetra == "N" :
+	if ColorLetra == "0" or ColorLetra == "negro" :
 		Color = x0
-	elif ColorLetra == "x1" or ColorLetra == "azul" or ColorLetra == "AZ" :
+	elif ColorLetra == "1" or ColorLetra == "azul" :
 		Color = x1
-	elif ColorLetra == "x2" or ColorLetra == "verde" or ColorLetra == "V" :
+	elif ColorLetra == "2" or ColorLetra == "verde" :
 		Color = x2
-	elif ColorLetra == "x3" or ColorLetra == "aguamarina" or ColorLetra == "AG" :
+	elif ColorLetra == "3" or ColorLetra == "aguamarina" :
 		Color = x3
-	elif ColorLetra == "x4" or ColorLetra == "rojo" or ColorLetra == "R" :
+	elif ColorLetra == "4" or ColorLetra == "rojo" :
 		Color = x4
-	elif ColorLetra == "x5" or ColorLetra == "purpura" or ColorLetra == "P" :
+	elif ColorLetra == "5" or ColorLetra == "purpura" :
 		Color = x5
-	elif ColorLetra == "x6" or ColorLetra == "amarillo" or ColorLetra == "AM" :
+	elif ColorLetra == "6" or ColorLetra == "amarillo" :
 		Color = x6
-	elif ColorLetra == "x7" or ColorLetra == "blanco" or ColorLetra == "B" :
+	elif ColorLetra == "7" or ColorLetra == "blanco" :
 		Color = x7
-	elif ColorLetra == "x8" or ColorLetra == "gris" or ColorLetra == "G" :
+	elif ColorLetra == "8" or ColorLetra == "gris" :
 		Color = x8
-	elif ColorLetra == "x9" or ColorLetra == "azul cl" or ColorLetra == "AC" :
+	elif ColorLetra == "9" or ColorLetra == "azul cl" :
 		Color = x9
-	elif ColorLetra == "xA" or ColorLetra == "verde cl" or ColorLetra == "VC" :
+	elif ColorLetra == "A" or ColorLetra == "verde cl" :
 		Color = xA
-	elif ColorLetra == "xB" or ColorLetra == "aguamarina cl" or ColorLetra == "AMC" :
+	elif ColorLetra == "B" or ColorLetra == "aguamarina cl" :
 		Color = xB
-	elif ColorLetra == "xC" or ColorLetra == "rojo cl" or ColorLetra == "RC" :
+	elif ColorLetra == "C" or ColorLetra == "rojo cl" :
 		Color = xC
-	elif ColorLetra == "xD" or ColorLetra == "purpura cl" or ColorLetra == "PC" :
+	elif ColorLetra == "D" or ColorLetra == "purpura cl" :
 		Color = xD
-	elif ColorLetra == "xE" or ColorLetra == "amarillo cl" or ColorLetra == "AC" :
+	elif ColorLetra == "E" or ColorLetra == "amarillo cl" :
 		Color = xE
-	elif ColorLetra == "xF" or ColorLetra == "blanco br" or ColorLetra == "BB" :
+	elif ColorLetra == "F" or ColorLetra == "blanco br" :
 		Color = xF
 	else:
 		Color = reset
@@ -136,3 +140,6 @@ reset = get_csbi_attributes(handle)
 #________________________________________________________________________
 #                               By: LawlietJH
 #________________________________________________________________________
+
+
+Dat()
