@@ -14,16 +14,6 @@
 
 import ctypes, os
 
-BA_1 = r" (  (                    (         (            "
-BA_2 = r" )\))(  ' (              )\        )\      (    "
-BA_3 = r"((_)()\ ) )\    (      (((_)   (  ((_) (   )(   "
-BA_4 = r"_(())\_)(((_)   )\ )   )\___   )\  _   )\ (()\  "
-BA_5 = r"\ \((_)/ /(_)  _(_/(  ((/ __| ((_)| | ((_)((_)  "
-BA_6 = r" \ \/\/ / | | | ' \))  | (__ / _ \| |/ _ \| '_| "
-BA_7 = r"  \_/\_/  |_| |_||_|    \___|\___/|_|\___/|_|   "
-
-
-
 BWC = r"""
                        ╦ ╦  ┬  ┌┐┌   ╔═╗ ┌─┐ ┬   ┌─┐ ┬─┐
                        ║║║  │  │││   ║   │ │ │   │ │ ├┬┘
@@ -32,24 +22,30 @@ BWC = r"""
 #~ Fuente: Calvin S, Página: http://patorjk.com/software/taag
 
 BA = r"""
-                            ╦  ┌─┐┬ ┬┬  ┬┌─┐┌┬┐╦╦ ╦
-                            ║  ├─┤││││  │├┤  │ ║╠═╣
-                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴╚╝╩ ╩
+                            ╦  ┌─┐┬ ┬┬  ┬┌─┐┌┬┐ ╦╦ ╦
+                            ║  ├─┤││││  │├┤  │  ║╠═╣
+                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴ ╚╝╩ ╩
 """
-
 #~ Fuente: Calvin S, Página: http://patorjk.com/software/taag
 
 def Dat():
+	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n{:^80}".format("1.0.2")
+	Version = "\n\n{:^80}".format("1.0.3")
 	
-	return ColorI("xF"), print("\n\n",Nombre),\
-	       ColorI("xB"), print("\n\n",Autor),\
-	       ColorI("xC"), print(Version), ColorF()
+	return os.system("cls"),\
+	       ColorI("BB"), print("\n\n",Nombre),\
+	       ColorI("AZ"), print("\n\n",Autor),\
+	       ColorI("RC"), print(Version), ColorF(),\
+	       os.system("Pause>Nul"), exit(0)
 
+#________________________________________________________________________
+
+#________________________________________________________________________
 #~ Constantes de la API de Windows.
 STD_OUTPUT_HANDLE = -11
+
 #_______________ Colores _______________
 
 x0   = 0x0000   # Color Negro.
@@ -140,6 +136,3 @@ reset = get_csbi_attributes(handle)
 #________________________________________________________________________
 #                               By: LawlietJH
 #________________________________________________________________________
-
-
-Dat()
