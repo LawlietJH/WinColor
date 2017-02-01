@@ -1,8 +1,20 @@
+# -*- coding: utf-8 -*-
+#
+#
+#    ██╗    ██╗██╗███╗   ██╗ ██████╗ ██████╗ ██╗      ██████╗ ██████╗ 
+#    ██║    ██║██║████╗  ██║██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗
+#    ██║ █╗ ██║██║██╔██╗ ██║██║     ██║   ██║██║     ██║   ██║██████╔╝
+#    ██║███╗██║██║██║╚██╗██║██║     ██║   ██║██║     ██║   ██║██╔══██╗
+#    ╚███╔███╔╝██║██║ ╚████║╚██████╗╚██████╔╝███████╗╚██████╔╝██║  ██║
+#     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
+#                                                                     
+#                                                         By: LawlietJH
+
 import ctypes
 
 #~ Constantes de la API de Windows.
 STD_OUTPUT_HANDLE = -11
-
+#_______________ Colores _______________
 
 x0   = 0x0000   # Color Negro.
 x1   = 0x0001   # Color Azul.
@@ -20,6 +32,8 @@ xC   = 0x000C   # Color Rojo Claro.
 xD   = 0x000D   # Color Púrpura Claro.
 xE   = 0x000E   # Color Amarillo Claro.
 xF   = 0x000F   # Color Blanco Brillante.
+#~ _______________________________________
+
 
 #~ Método que reinicia al color original
 def get_csbi_attributes(handle):
@@ -34,20 +48,46 @@ def get_csbi_attributes(handle):
     (bufx, bufy, curx, cury, wattr, left, top, right, bottom, maxx, maxy) = struct.unpack("hhhhHhhhhhh", csbi.raw)
     return wattr
 
-#~ Métodos en variables que simplifican el nombre.
-handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
-reset = get_csbi_attributes(handle)
 
 #~ Método Que Indica En Donde Iniciará El Color.
-def ColorI(Fondo):
-	colorI = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, Fondo)
+def ColorI(ColorLetra):
+	
+	if ColorLetra == "xA" or ColorLetra == xA :
+		Color = xA
+	elif ColorLetra == "xB" or ColorLetra == xB :
+		Color = xB
+	elif ColorLetra == "xC" or ColorLetra == xC :
+		Color = xC
+	elif ColorLetra == "xD" or ColorLetra == xD :
+		Color = xD
+	elif ColorLetra == "xE" or ColorLetra == xE :
+		Color = xE
+	elif ColorLetra == "xF" or ColorLetra == xF :
+		Color = xF
+	else:
+		Color = reset
+
+	colorI = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, Color)
 	return colorI
+
 
 #~ Método Que Indica En Donde Terminará El Color.
 def ColorF():
 	colorF = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, reset)
 	return colorF
 
-ColorI(xF)
+
+#~ Métodos en variables que simplifican el nombre.
+handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+reset = get_csbi_attributes(handle)
+
+#________________________________________________________________________
+#                               By: LawlietJH
+#________________________________________________________________________
+
+
+xD = input("Color: ")
+
+ColorI(xA)
 print("\n\n\t Texto De Ejemplo.")
 ColorF()
