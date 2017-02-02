@@ -1,15 +1,15 @@
 # WinColor
 ## Pon Color A Tus Scripts de Python En Windows.
 
-Modo de Uso:
+### Modo de Uso:
 
-Tienes que importar el modulo WinColor a tu Script: `import WinColor`, esto te permitira usar los metodos: `WinColor.ColorI()`,`WinColor.ColorF()`, `WinColor.Dat()`
+Tienes que importar el modulo WinColor a tu Script: `import WinColor`, esto te permitira usar los metodos: `WinColor.Color()`,`WinColor.Rest()`, `WinColor.Dat()`
   
-//Importar de la siguiente manera evitará escribir demasiado: `from WinColor import ColorI, ColorF, Dat`, el metodo Dat es opcional.
+//Importar de la siguiente manera evitará escribir demasiado: `from WinColor import Color, Reset, Dat`, el metodo Dat es opcional.
 De esta manera podras llamar a los metodos sin necesidad de especificar antes el modulo: `WinColor.Dat()` ---> `Dat()`
   + La funcion `ColorI()` requiere una serie de parametros, puede ser cualquiera de la sguiente lista:
 
-    + Ejemplo: `ColorI("x0")`, `ColoI("negro")` o `ColorI("N")`
+    + Ejemplo: `Color("x0")`, `Color("negro")` o `Color("N")`
     
       + Lista De Colores:
         * Negro             = x0,   negro,          N
@@ -29,22 +29,22 @@ De esta manera podras llamar a los metodos sin necesidad de especificar antes el
         * Amarillo Claro    = xE,   amarillo cl,    AMC
         * Blanco Brillante  = xF,   blanco br,      BB
   
-  + El metodo `ColorF()` Restaura los color por defecto de la ventana
+  + El metodo `Reset()` Restaura los color por defecto de la ventana
   
   + El método `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
   
   Ejemplos de uso:
   
   ```[Python]
-  from WinColor import ColorI, ColorF, Dat
+  from WinColor import Color, Reset, Dat
   
-  ColorI("azul cl")
+  Color("azul cl")
   print("\n\n\t Esto es un texto en Azul Claro")
   
-  ColorI("rojo cl")
+  Color("rojo cl")
   print("\n\n\t Ahora Esta linea es de color Rojo Claro"
   
-  ColorF()
+  Reset()
   print("\n\n\t Esta linea tiene ahora el color por defecto de la ventana de comandos")
   ```
   
