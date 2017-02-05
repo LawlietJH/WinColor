@@ -205,9 +205,9 @@ def winsize(Ancho=82, Alto=55):
 
 def cursor(imp="Hidden"):
 	
-	#~ imp = imp.title()		#Devuelve la cadena con la primera letra de cada palabra en mayuscula
-	imp = imp.capitalize()		#Devuelve la cadena con la primera letra de la primer palabra en mayuscula
-	print(imp)
+	#~ imp = imp.title()		#Devuelve la cadena solo con la primera letra de cada palabra en mayuscula
+	imp = imp.capitalize()		#Devuelve la cadena solo con la primera letra de la primer palabra en mayuscula
+
 	if os.name == 'nt':
 		import msvcrt
 		import ctypes
@@ -218,7 +218,6 @@ def cursor(imp="Hidden"):
 	
 	def hide_cursor():
 		if os.name == 'nt':
-			print(imp)
 			ci = _CursorInfo()
 			handle = ctypes.windll.kernel32.GetStdHandle(-11)
 			ctypes.windll.kernel32.GetConsoleCursorInfo(handle, ctypes.byref(ci))
