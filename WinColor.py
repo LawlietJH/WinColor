@@ -182,20 +182,16 @@ def ispyver3():
 	else:
 		return False
 
-
 def clear():
 	
-	if iswindows():
-		os.system('cls')
-	else:
-		os.system('clear')	#Unix/Linux/MacOS/BSD
+    if os.name == ("ce", "nt", "dos"): #~ DOS/Windows(nt)
+    elif os.name == "posix": #~ Unix/Linux/MacOS/BSD
 
 
-def in(inp):
+def inp(inp):
 	
 	if ispyver3():
 		return input(inp)
 	else:
 		return raw_input(inp)
-
 
