@@ -12,7 +12,10 @@
 #                                                         By: LawlietJH
 #                                                                 1.0.4
 
-import ctypes, os
+import ctypes
+import sys
+import os
+
 
 BWC = r"""
                        ╦ ╦  ┬  ┌┐┌   ╔═╗ ┌─┐ ┬   ┌─┐ ┬─┐
@@ -133,6 +136,23 @@ def rest():
 handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
 reset = get_csbi_attributes(handle)
 
+
 #________________________________________________________________________
 #                               By: LawlietJH
 #________________________________________________________________________
+
+
+
+###### ###### ##### ##### Métodos de Uso Extras ##### ##### ###### ######
+
+
+
+def iswindows():
+	
+	osver = os.popen("ver").read()
+	
+	if osver.find("Windows") > 0:
+		return True
+	else:
+		return False
+
