@@ -167,3 +167,10 @@ def islinux():
 		return False
 
 
+def ispyver2():
+	
+		return True
+	else:
+		return False
+
+
