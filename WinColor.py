@@ -185,7 +185,9 @@ def ispyver3():
 def clear():
 	
     if os.name == ("ce", "nt", "dos"): #~ DOS/Windows(nt)
+        os.system("cls")
     elif os.name == "posix": #~ Unix/Linux/MacOS/BSD
+        os.system("clear")	
 
 
 def inp(inp):
