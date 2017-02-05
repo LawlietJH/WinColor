@@ -189,4 +189,12 @@ def clear():
 		os.system('cls')
 	else:
 		os.system('clear')	#Unix/Linux/MacOS/BSD
-		
+
+
+	
+	if ispyver3():
+		return input(inp)
+	else:
+		return raw_input(inp)
+
+
