@@ -197,3 +197,8 @@ def inp(inp):
 	else:
 		return raw_input(inp)
 
+
+def winsize(Ancho=82, Alto=55):
+	os.system("mode con: cols={} lines={}".format(Ancho, Alto))
+
+
