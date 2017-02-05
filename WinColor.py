@@ -191,6 +191,7 @@ def clear():
 		os.system('clear')	#Unix/Linux/MacOS/BSD
 
 
+def in(inp):
 	
 	if ispyver3():
 		return input(inp)
