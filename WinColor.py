@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.0.3
+#                                                                 1.0.4
 
 import ctypes, os
 
@@ -32,12 +32,12 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n{:^80}".format("1.0.3")
+	Version = "\n\n{:^80}".format("1.0.4")
 	
 	return os.system("cls"),\
-	       ColorI("BB"), print("\n\n",Nombre),\
-	       ColorI("AZ"), print("\n\n",Autor),\
-	       ColorI("RC"), print(Version), ColorF(),\
+	       Color("BB"), print("\n\n",Nombre),\
+	       Color("AZ"), print("\n\n",Autor),\
+	       Color("RC"), print(Version), rest(),\
 	       os.system("Pause>Nul"), exit(0)
 
 #________________________________________________________________________
@@ -82,7 +82,7 @@ def get_csbi_attributes(handle):
 
 
 #~ Método Que Indica En Donde Iniciará El Color.
-def ColorI(ColorLetra):
+def Color(ColorLetra):
 	
 	if ColorLetra == "x0" or ColorLetra == "negro" or ColorLetra == "N" :
 		Color = x0
@@ -124,9 +124,9 @@ def ColorI(ColorLetra):
 
 
 #~ Método Que Indica En Donde Terminará El Color.
-def ColorF():
-	colorF = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, reset)
-	return colorF
+def rest():
+	reinicar = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, reset)
+	return reinicar
 
 
 #~ Métodos en variables que simplifican el nombre.
