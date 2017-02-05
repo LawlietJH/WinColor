@@ -156,3 +156,14 @@ def iswindows():
 	else:
 		return False
 
+
+def islinux():
+	
+	osver = os.popen("ver").read()
+	
+	if osver.find("Linux") > 0:
+		return True
+	else:
+		return False
+
+
