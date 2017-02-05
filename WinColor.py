@@ -37,7 +37,7 @@ def Dat():
 	Autor = BA
 	Version = "\n\n{:^80}".format("1.0.4")
 	
-	return os.system("cls"),\
+	return os.system("cls"), winsize(80,22),\
 	       Color("BB"), print("\n\n",Nombre),\
 	       Color("AZ"), print("\n\n",Autor),\
 	       Color("RC"), print(Version), rest(),\
@@ -199,6 +199,50 @@ def inp(inp):
 
 
 def winsize(Ancho=82, Alto=55):
+	
 	os.system("mode con: cols={} lines={}".format(Ancho, Alto))
 
+
+def cursor(imp="Hidden"):
+	
+	#~ imp = imp.title()		#Devuelve la cadena con la primera letra de cada palabra en mayuscula
+	imp = imp.capitalize()		#Devuelve la cadena con la primera letra de la primer palabra en mayuscula
+	print(imp)
+	if os.name == 'nt':
+		import msvcrt
+		import ctypes
+
+		class _CursorInfo(ctypes.Structure):
+			_fields_ = [("size", ctypes.c_int),
+						("visible", ctypes.c_byte)]
+	
+	def hide_cursor():
+		if os.name == 'nt':
+			print(imp)
+			ci = _CursorInfo()
+			handle = ctypes.windll.kernel32.GetStdHandle(-11)
+			ctypes.windll.kernel32.GetConsoleCursorInfo(handle, ctypes.byref(ci))
+			ci.visible = False
+			ctypes.windll.kernel32.SetConsoleCursorInfo(handle, ctypes.byref(ci))
+		elif os.name == 'posix':
+			sys.stdout.write("\033[?25l")
+			sys.stdout.flush()
+
+	def show_cursor():
+		if os.name == 'nt':
+			ci = _CursorInfo()
+			handle = ctypes.windll.kernel32.GetStdHandle(-11)
+			ctypes.windll.kernel32.GetConsoleCursorInfo(handle, ctypes.byref(ci))
+			ci.visible = True
+			ctypes.windll.kernel32.SetConsoleCursorInfo(handle, ctypes.byref(ci))
+		elif os.name == 'posix':
+			sys.stdout.write("\033[?25h")
+			sys.stdout.flush()
+			
+	if imp == "Hidden":
+		hide_cursor()
+	elif imp =="Show":
+		show_cursor()
+	else:
+		return #print("\n\n\t\t Escribe: Show | Hidden\n\n\n\tEjemplo: Cursor(\"Hidden\")")
 
