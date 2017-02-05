@@ -169,6 +169,15 @@ def islinux():
 
 def ispyver2():
 	
+	if sys.version_info <= (2, 99):
+		return True
+	else:
+		return False
+
+
+def ispyver3():
+	
+	if sys.version_info > (2, 99):
 		return True
 	else:
 		return False
