@@ -10,24 +10,25 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.0.4
+#                                                                 1.0.7
 
 import ctypes
+import time
 import sys
 import os
 
 
 BWC = r"""
-                       ╦ ╦  ┬  ┌┐┌   ╔═╗ ┌─┐ ┬   ┌─┐ ┬─┐
-                       ║║║  │  │││   ║   │ │ │   │ │ ├┬┘
-                       ╚╩╝  ┴  ┘└┘   ╚═╝ └─┘ ┴─┘ └─┘ ┴└─
+                      ╦ ╦  ┬  ┌┐┌   ╔═╗ ┌─┐ ┬   ┌─┐ ┬─┐
+                      ║║║  │  │││   ║   │ │ │   │ │ ├┬┘
+                      ╚╩╝  ┴  ┘└┘   ╚═╝ └─┘ ┴─┘ └─┘ ┴└─
 """
 #~ Fuente: Calvin S, Página: http://patorjk.com/software/taag
 
 BA = r"""
-                            ╦  ┌─┐┬ ┬┬  ┬┌─┐┌┬┐ ╦╦ ╦
-                            ║  ├─┤││││  │├┤  │  ║╠═╣
-                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴ ╚╝╩ ╩
+                           ╦  ┌─┐┬ ┬┬  ┬┌─┐┌┬┐ ╦╦ ╦
+                           ║  ├─┤││││  │├┤  │  ║╠═╣
+                           ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴ ╚╝╩ ╩
 """
 #~ Fuente: Calvin S, Página: http://patorjk.com/software/taag
 
@@ -35,12 +36,12 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n{:^80}".format("1.0.4")
+	Version = "\n\n\n{:^80}".format("1.0.7")
 	
 	return os.system("cls"), winsize(80,22),\
-	       Color("BB"), print("\n\n",Nombre),\
-	       Color("AZ"), print("\n\n",Autor),\
-	       Color("RC"), print(Version), rest(),\
+	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
+	       color("AZC"), print("\n\n", Autor), time.sleep(0.1),\
+	       color("RC"), print(Version), rest(),\
 	       os.system("Pause>Nul"), exit(0)
 
 #________________________________________________________________________
@@ -70,7 +71,7 @@ xF   = 0x000F   # Color Blanco Brillante.
 #~ _______________________________________
 
 
-#~ Método que reinicia al color original
+#~ Función que reinicia al color original
 def get_csbi_attributes(handle):
     #~ Basado en winconsole.py de IPython
     
@@ -84,8 +85,8 @@ def get_csbi_attributes(handle):
     return wattr
 
 
-#~ Método Que Indica En Donde Iniciará El Color.
-def Color(ColorLetra):
+#~ Función Que Indica En Donde Iniciará El Color.
+def color(ColorLetra):
 	
 	if ColorLetra == "x0" or ColorLetra == "negro" or ColorLetra == "N" :
 		Color = x0
@@ -126,13 +127,13 @@ def Color(ColorLetra):
 	return colorI
 
 
-#~ Método Que Indica En Donde Terminará El Color.
+#~ Función Que Indica En Donde Terminará El Color.
 def rest():
 	reinicar = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, reset)
 	return reinicar
 
 
-#~ Métodos en variables que simplifican el nombre.
+#~ Variables que simplifican el nombre.
 handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
 reset = get_csbi_attributes(handle)
 
@@ -143,7 +144,7 @@ reset = get_csbi_attributes(handle)
 
 
 
-###### ###### ##### ##### Métodos de Uso Extras ##### ##### ###### ######
+###### ###### ##### ##### Funciones de Uso Extras ##### ##### ###### ######
 
 
 
@@ -245,3 +246,4 @@ def cursor(imp="Hidden"):
 	else:
 		return #print("\n\n\t\t Escribe: Show | Hidden\n\n\n\tEjemplo: Cursor(\"Hidden\")")
 
+Dat()
