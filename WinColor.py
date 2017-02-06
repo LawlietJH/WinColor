@@ -246,4 +246,3 @@ def cursor(imp="Hidden"):
 	else:
 		return #print("\n\n\t\t Escribe: Show | Hidden\n\n\n\tEjemplo: Cursor(\"Hidden\")")
 
-Dat()
