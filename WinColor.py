@@ -32,6 +32,7 @@ BA = r"""
 """
 #~ Fuente: Calvin S, Página: http://patorjk.com/software/taag
 
+
 def Dat():
 	
 	Nombre = BWC
@@ -87,6 +88,7 @@ def get_csbi_attributes(handle):
 
 #~ Función Que Indica En Donde Iniciará El Color.
 def color(ColorLetra):
+	sys.stdout.flush()
 	
 	if ColorLetra == "x0" or ColorLetra == "negro" or ColorLetra == "N" :
 		Color = x0
@@ -124,7 +126,8 @@ def color(ColorLetra):
 		Color = reset
 
 	colorI = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, Color)
-	return colorI
+	
+	return ""
 
 
 #~ Función Que Indica En Donde Terminará El Color.
