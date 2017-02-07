@@ -130,6 +130,15 @@ def color(ColorLetra):
 	return ""
 
 
+
+#~ Función que sirve para poder poner colores en la misma linea
+def flush():
+	return sys.stdout.flush()
+
+	
+
+
+
 #~ Función Que Indica En Donde Terminará El Color.
 def rest():
 	reinicar = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, reset)
