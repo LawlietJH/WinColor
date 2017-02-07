@@ -193,6 +193,17 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 			return color("BB"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("BB"), print("]", end="")
 		elif Color1 == None and Color2 == None:
 			return color("BB"), print("[", end=""), color("PC"), print(Simbolo, end=""), color("BB"), print("]", end="")
+	
+	elif (Simbolo == "~"):
+		if Color1 != None and Color2 != None:
+			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
+		elif Color1 != None and Color2 == None:
+			return color(Color1), print("[", end=""), color("BB"), print(Simbolo, end=""), color(Color1), print("]", end="")
+		elif Color1 == None and Color2 != None:
+			return color("VC"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("VC"), print("]", end="")
+		elif Color1 == None and Color2 == None:
+			return color("VC"), print("[", end=""), color("BB"), print(Simbolo, end=""), color("VC"), print("]", end="")
+	
 
 
 
