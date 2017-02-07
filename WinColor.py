@@ -139,7 +139,10 @@ def flush():
 #~ Función para mostrar recuadro [+], [-], [!], [¡], [*], [~], [#], [&] con colores
 def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 	
-	if (Simbolo == "+"):
+	if (Simbolo == "+") or (Simbolo == ">+"):
+		
+		if(Simbolo[0] == ">"):
+			color("VC"), print(" ---> ", end="")
 		
 		if Color1 != None and Color2 != None:
 			return color(Color1), print("[", end=""), color(Color2), print(Simbolo[-1], end=""), color(Color1), print("]", end="")
@@ -149,6 +152,18 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 			return color("BB"), print("[", end=""), color(Color2), print(Simbolo[-1], end=""), color("BB"), print("]", end="")
 		elif Color1 == None and Color2 == None:
 			return color("BB"), print("[", end=""), color("VC"), print(Simbolo[-1], end=""), color("BB"), print("]", end="")
+
+	
+	elif (Simbolo == "-"):
+		if Color1 != None and Color2 != None:
+			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
+		elif Color1 != None and Color2 == None:
+			return color(Color1), print("[", end=""), color("AZC"), print(Simbolo, end=""), color(Color1), print("]", end="")
+		elif Color1 == None and Color2 != None:
+			return color("BB"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("BB"), print("]", end="")
+		elif Color1 == None and Color2 == None:
+			return color("BB"), print("[", end=""), color("AZC"), print(Simbolo, end=""), color("BB"), print("]", end="")
+	
 
 
 
