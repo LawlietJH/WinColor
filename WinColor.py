@@ -131,12 +131,26 @@ def color(ColorLetra):
 
 
 
+#~ Función Que Indica En Donde Terminará El Color.
+def rest():
+	reinicar = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, reset)
+	return reinicar
+
+
+
+#~ Variables que simplifican el nombre.
+handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+reset = get_csbi_attributes(handle)
+
+
+
 #~ Función que sirve para poder poner colores en la misma linea
 def flush():
 	return sys.stdout.flush()
 
+
 	
-#~ Función para mostrar recuadro [+], [-], [!], [¡], [*], [~], [#], [&] con colores
+#~ Función para mostrar recuadro [+], [-], [!], [¡], [*], [~], [#], [&], [ ] con colores
 def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 	
 	if (Simbolo == "+") or (Simbolo == ">+"):
@@ -224,18 +238,16 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 		elif Color1 == None and Color2 == None:
 			return color("BB"), print("[", end=""), color("R"), print(Simbolo, end=""), color("BB"), print("]", end="")
 	
-
-
-#~ Función Que Indica En Donde Terminará El Color.
-def rest():
-	reinicar = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, reset)
-	return reinicar
-
-
-#~ Variables que simplifican el nombre.
-handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
-reset = get_csbi_attributes(handle)
-
+	elif (Simbolo == " "):
+		if Color1 != None and Color2 != None:
+			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
+		elif Color1 != None and Color2 == None:
+			return color(Color1), print("[", end=""), color("N"), print(Simbolo, end=""), color(Color1), print("]", end="")
+		elif Color1 == None and Color2 != None:
+			return color("BB"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("BB"), print("]", end="")
+		elif Color1 == None and Color2 == None:
+			return color("BB"), print("[", end=""), color("N"), print(Simbolo, end=""), color("BB"), print("]", end="")
+	
 
 #________________________________________________________________________
 #                               By: LawlietJH
