@@ -296,7 +296,9 @@ def islinux():
 
 def ispyver2():
 	
-	if sys.version_info <= (2, 99):
+	xD=sys.version[0]
+	
+	if int(xD) == 2:
 		return True
 	else:
 		return False
@@ -304,14 +306,19 @@ def ispyver2():
 
 def ispyver3():
 	
-	if sys.version_info > (2, 99):
+	xD=sys.version[0]
+	
+	if int(xD) == 3:
 		return True
 	else:
 		return False
 
-def clear():
+print(ispyver2())
+os.system("Pause>Nul")
+
+def Clear():
 	
-    if os.name == ("ce", "nt", "dos"): #~ DOS/Windows(nt)
+    if os.name == "nt" or os.name == "ce" or os.name == "dos": #~ Windows(nt)\Windows(ce)\DOS
         os.system("cls")
     elif os.name == "posix": #~ Unix/Linux/MacOS/BSD
         os.system("clear")	
@@ -325,7 +332,7 @@ def inp(inp):
 		return raw_input(inp)
 
 
-def winsize(Ancho=82, Alto=55):
+def WinSize(Ancho=82, Alto=55):
 	
 	os.system("mode con: cols={} lines={}".format(Ancho, Alto))
 
@@ -355,7 +362,7 @@ def ChkMod(nombre):
 	#~ return resultados
 
 
-def cursor(imp="Hidden"):
+def HiddenCursor(imp="Hidden"):
 	
 	#~ imp = imp.title()		#Devuelve la cadena solo con la primera letra de cada palabra en mayuscula
 	imp = imp.capitalize()		#Devuelve la cadena solo con la primera letra de la primer palabra en mayuscula
