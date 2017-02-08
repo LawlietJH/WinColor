@@ -273,8 +273,8 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 ###### ###### ##### ##### Funciones de Uso Extras ##### ##### ###### ######
 
 
-
-def iswindows():
+#~ Función Que Comprueba si el SO es Windows, Devuelve TRUE/FALSE
+def isWindows():
 	
 	osver = os.popen("ver").read()
 	
@@ -284,7 +284,8 @@ def iswindows():
 		return False
 
 
-def islinux():
+#~ Función Que Comprueba si el SO es Linux, Devuelve TRUE/FALSE
+def isLinux():
 	
 	osver = os.popen("ver").read()
 	
@@ -294,7 +295,8 @@ def islinux():
 		return False
 
 
-def ispyver2():
+#~ Función Que Comprueba si es Python Versión 2, Devuelve TRUE/FALSE
+def isPyver2():
 	
 	xD=sys.version[0]
 	
@@ -304,7 +306,8 @@ def ispyver2():
 		return False
 
 
-def ispyver3():
+#~ Función Que Comprueba si es Python Versión 3, Devuelve TRUE/FALSE
+def isPyver3():
 	
 	xD=sys.version[0]
 	
@@ -313,9 +316,8 @@ def ispyver3():
 	else:
 		return False
 
-print(ispyver2())
-os.system("Pause>Nul")
 
+#~ Función Que Permite Limpiar Pantalla Compatible Con Diferentes Sistemas Operativos (SO).
 def Clear():
 	
     if os.name == "nt" or os.name == "ce" or os.name == "dos": #~ Windows(nt)\Windows(ce)\DOS
@@ -324,19 +326,22 @@ def Clear():
         os.system("clear")	
 
 
+#~ Función Que Permite Imprimir En Pantalla Compatible Con Python Versión 2 y 3, Devuelve Cadena
 def inp(inp):
 	
 	if ispyver3():
 		return input(inp)
-	else:
+	elif ispyver2():
 		return raw_input(inp)
 
 
+#~ Función Que Permite Cambiar el Tamaño de la Pantalla.
 def WinSize(Ancho=82, Alto=55):
 	
 	os.system("mode con: cols={} lines={}".format(Ancho, Alto))
 
 
+#~ Función Que Permite Checar Un Módulo.
 def ChkMod(nombre):
 	
 	import pydoc
@@ -359,9 +364,10 @@ def ChkMod(nombre):
             
 	pydoc.ModuleScanner().run(callback)
 	
-	#~ return resultados
+	return resultados
 
 
+#~ Función Que Permite Esconder El Cursor de la Pantalla (La rayita que parpadea xD).
 def HiddenCursor(imp="Hidden"):
 	
 	#~ imp = imp.title()		#Devuelve la cadena solo con la primera letra de cada palabra en mayuscula
