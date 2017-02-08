@@ -330,6 +330,31 @@ def winsize(Ancho=82, Alto=55):
 	os.system("mode con: cols={} lines={}".format(Ancho, Alto))
 
 
+def ChkMod(nombre):
+	
+	import pydoc
+	import re
+
+	pat=re.compile(nombre,re.IGNORECASE)
+	resultados=[]
+	
+	print("\n\n    ", end=""), Mark("&"), color("BB"), print(" Módulo:", end=""), color("AZC"), print("",nombre, "\n")
+	
+	def callback(p,n,d):
+		if n.endswith(".__init__"):
+			n=n[-9:]
+		if pat.search(n):
+			if n == nombre:
+				print("      ", end=""), Mark(">+","VC"), color("VC"), print("", n)
+			else:
+				print("\t    ", end=""), Mark("+","VC"), color("VC"), print("", n)
+			resultados.append( (n, p) )
+            
+	pydoc.ModuleScanner().run(callback)
+	
+	#~ return resultados
+
+
 def cursor(imp="Hidden"):
 	
 	#~ imp = imp.title()		#Devuelve la cadena solo con la primera letra de cada palabra en mayuscula
