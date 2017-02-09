@@ -8,6 +8,28 @@ Tienes que importar el modulo WinColor a tu Script: `import WinColor`
   
 //Importar de la siguiente manera evitará escribir demasiado: `from WinColor import *`.
 De esta manera podras llamar a los métodos sin necesidad de especificar antes el modulo: `WinColor.Dat()` ---> `Dat()`
+
+
+### Funciones Disponibles:
+
+```python
+WinColor.Dat()
+WinColor.color()
+WinColor.rest()
+WinColor.flush()
+WinColor.Mark()
+WinColor.isWindows()
+WinColor.isLinux()
+WinColor.isPyver2()
+WinColor.isPyver3()
+WinColor.Clear()
+WinColor.inp()
+WinColor.WinSize()
+WinColor.ChkMod()
+WinColor.HiddenCursor()
+```
+
+
   + La funcion `color()` requiere una serie de parametros, puede ser cualquiera de la sguiente lista:
 
     
