@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.1.1
+#                                                                 1.1.2
 
 import ctypes
 import time
@@ -37,7 +37,7 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("1.1.1")
+	Version = "\n\n\n{:^80}".format("1.1.2")
 	
 	return os.system("cls"), winsize(80,22),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
@@ -113,7 +113,7 @@ def color(ColorLetra):
 		Color = x9
 	elif ColorLetra == "xA" or ColorLetra == "verde cl" or ColorLetra == "VC" :
 		Color = xA
-	elif ColorLetra == "xB" or ColorLetra == "aguamarina cl" or ColorLetra == "AGC" :
+	elif ColorLetra == "xB" or ColorLetra == "aguamarina cl" or ColorLetra == "AGMC" :
 		Color = xB
 	elif ColorLetra == "xC" or ColorLetra == "rojo cl" or ColorLetra == "RC" :
 		Color = xC
@@ -155,7 +155,7 @@ def flush():
 
 
 	
-#~ Función para mostrar recuadro [+], [-], [!], [¡], [*], [~], [#], [&], [ ] con colores
+#~ Función para mostrar recuadro [+], [-], [!], [¡], [*], [~], [#], [&], [?], [ ] con colores
 def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 	
 	if (Simbolo == "+") or (Simbolo == ">+"):
@@ -164,13 +164,13 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 			color("BB"), print(" ===> ", end="")
 		
 		if Color1 != None and Color2 != None:
-			return color(Color1), print("[", end=""), color(Color2), print(Simbolo[-1], end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo[-1]+color(Color2), end=""), print("]"+color(Color1), end="")
 		elif Color1 != None and Color2 == None:
-			return color(Color1), print("[", end=""), color("VC"), print(Simbolo[-1], end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo[-1]+color("VC"), end=""), print("]"+ color(Color1), end="")
 		elif Color1 == None and Color2 != None:
-			return color("BB"), print("[", end=""), color(Color2), print(Simbolo[-1], end=""), color("BB"), print("]", end="")
+			return print("["+color("BB"), end=""), print(Simbolo[-1]+color(Color2), end=""), print("]"+color("BB"), end="")
 		elif Color1 == None and Color2 == None:
-			return color("BB"), print("[", end=""), color("VC"), print(Simbolo[-1], end=""), color("BB"), print("]", end="")
+			return print("["+color("BB"), end=""), print(Simbolo[-1]+color("VC"), end=""), print("]"+color("BB"), end="")
 
 	
 	elif (Simbolo == "-"):
@@ -207,11 +207,11 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 		if Color1 != None and Color2 != None:
 			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
 		elif Color1 != None and Color2 == None:
-			return color(Color1), print("[", end=""), color("PC"), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return color(Color1), print("[", end=""), color("AGC"), print(Simbolo, end=""), color(Color1), print("]", end="")
 		elif Color1 == None and Color2 != None:
 			return color("BB"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("BB"), print("]", end="")
 		elif Color1 == None and Color2 == None:
-			return color("BB"), print("[", end=""), color("PC"), print(Simbolo, end=""), color("BB"), print("]", end="")
+			return color("BB"), print("[", end=""), color("AGC"), print(Simbolo, end=""), color("BB"), print("]", end="")
 	
 	elif (Simbolo == "~"):
 		if Color1 != None and Color2 != None:
@@ -237,21 +237,21 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 		if Color1 != None and Color2 != None:
 			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
 		elif Color1 != None and Color2 == None:
-			return color(Color1), print("[", end=""), color("RC"), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return color(Color1), print("[", end=""), color("VC"), print(Simbolo, end=""), color(Color1), print("]", end="")
 		elif Color1 == None and Color2 != None:
-			return color("VC"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("VC"), print("]", end="")
+			return color("AGMC"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("AGMC"), print("]", end="")
 		elif Color1 == None and Color2 == None:
-			return color("VC"), print("[", end=""), color("RC"), print(Simbolo, end=""), color("VC"), print("]", end="")
+			return color("AGMC"), print("[", end=""), color("VC"), print(Simbolo, end=""), color("AGMC"), print("]", end="")
 	
 	elif (Simbolo == "?"):
 		if Color1 != None and Color2 != None:
 			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
 		elif Color1 != None and Color2 == None:
-			return color(Color1), print("[", end=""), color("AGMC"), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return color(Color1), print("[", end=""), color("AMC"), print(Simbolo, end=""), color(Color1), print("]", end="")
 		elif Color1 == None and Color2 != None:
-			return color("AMC"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("AMC"), print("]", end="")
+			return color("AGMC"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("AGMC"), print("]", end="")
 		elif Color1 == None and Color2 == None:
-			return color("AMC"), print("[", end=""), color("AGMC"), print(Simbolo, end=""), color("AMC"), print("]", end="")
+			return color("AGMC"), print("[", end=""), color("AMC"), print(Simbolo, end=""), color("AGMC"), print("]", end="")
 	
 	elif (Simbolo == " "):
 		if Color1 != None and Color2 != None:
