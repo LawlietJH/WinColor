@@ -50,7 +50,7 @@ Lista De Colores:
 | Gris             | x8  | gris          | G      |
 | Azul Claro       | x9  | azul cl       | AZC    |
 | Verde Claro      | xA  | verde cl      | VC     |
-| Aguamarina Claro | xB  | aguamarina cl | AGC    |   
+| Aguamarina Claro | xB  | aguamarina cl | AGMC   |   
 | Rojo Claro       | xC  | rojo cl       | RC     |
 | Púrpura Claro    | xD  | purpura cl    | PC     |
 | Amarillo Claro   | xE  | amarillo cl   | AMC    |
@@ -107,3 +107,41 @@ Lista De Colores:
   La función `flush()` es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
   Para usar esta función simplemente se tiene que colocar el nombre `flush()` antes de la función `color()` con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
   
+## Mark()
+
+  Esta simple y a su vez practica función, permite añadir cuadros con símbolos, [+], [-], [!], etc., para poder imprimir en pantalla con colores personalizados de forma rápida y practica.
+  
+#### Modo de uso:
+  
+Por defecto: `Mark()`.
+Llamar la función de esta manera, por defecto imprimirá en pantalla: `[ ]` 
+La cual tendra Corchetes color Blanco Brillante y sin ningun Símbolo.
+   
+Lista De Usos Por defecto:
+  
+   
+| Función    |Símbolo |Color de Flecha   |Color de Símbolo  |Color de Corchetes|En Pantalla|
+|:-----------|:------:|:----------------:|:----------------:|:----------------:|:---------:|
+|`Mark()`    |Espacio |                  | Negro            | Blanco Brillante |`[ ]`      |
+|`Mark("+")` | +      |                  | Verde Claro      | Blanco Brillante | `[+]`     |
+|`Mark(">+")`| ---> + | Blanco Brillante | Verde Claro      | Blanco Brillante | `---> [+]`|
+|`Mark("-")` | -      |                  | Azul Claro       | Blanco Brillante | `-+]`     |
+|`Mark("!")` | !      |                  | Rojo Claro       | Blanco Brillante | `[!]`     |
+|`Mark("¡")` | ¡      |                  | Amarillo Claro   | Blanco Brillante | `[¡]`     |
+|`Mark("*")` | *      |                  | Aguamarina Claro | Blanco Brillante | `[*]`     |
+|`Mark("~")` | ~      |                  | Blanco Brillante | Verde Claro      | `[~]`     |
+|`Mark("#")` | #      |                  | Gris             | Blanco Brillante | `[#]`     |
+|`Mark("&")` | &      |                  | Verde Claro      | Aguamarina Claro | `[&]`     |
+|`Mark("?")` | ?      |                  | Amarillo Claro   | Aguamarina Claro | `[?]`     |
+
+Ejemplos:
+  
+  ```python
+   #~ Siempre se tiene que añadir fuera del print()
+  
+  print("\n\n\t", end=""), Mark(), print(" Hey!")
+  print("\n\t", end=""), Mark("!","VC","BB"), print(" Hola Mundo!")
+  ```
+En Pantalla:
+  
+####~ Imagen Pendiente. xD
