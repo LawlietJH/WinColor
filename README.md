@@ -10,22 +10,21 @@ Para importar todo, se escribe de la siguiente manera y así se evitará escribi
 
 ### Funciones Disponibles:
 
-```python
-WinColor.Dat()
-WinColor.color()
-WinColor.rest()
-WinColor.flush()
-WinColor.Mark()
-WinColor.isWindows()
-WinColor.isLinux()
-WinColor.isPyver2()
-WinColor.isPyver3()
-WinColor.Clear()
-WinColor.inp()
-WinColor.WinSize()
-WinColor.ChkMod()
-WinColor.HiddenCursor()
-```
++ `Dat()`
++ `color()`
++ `rest()`
++ `flush()`
++ `Mark()`
++ `isWindows()`
++ `isLinux()`
++ `isPyver2()`
++ `isPyver3()`
++ `Clear()`
++ `inp()`
++ `WinSize()`
++ `ChkMod()`
++ `HiddenCursor()`
+
 
 ## color()
 
