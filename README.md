@@ -60,39 +60,51 @@ Lista De Colores:
   Ejemplos de uso:
   
   ```python
+  
   from WinColor import *
   
   #~ Llamada a la función en lineas separadas.
+  
   color("azul cl")
   print("\n\n\t Esto es un texto en Azul Claro")
   
   #~ Llamada a la función en una misma linea.
+  
   color("xC"), print("\n\n\t Ahora Esta linea es de color Rojo Claro")
   
   #~ Poner colores en una sola linea.
   #~ Añadiendo end="" al final, remplazará el salto de linea que se hace por defecto en cada print() por
   #~ una cadena vacía, esto hará que se unan los 2 print() en una sola linea.
   #~ Se puede añadir la cadena que se desee en el end="Hola" y se añadirá entre ambos print().
+  
   color("VC"), print("\n\n\t Texto color Verde Claro", end="")
   color("BB"), print("--->", end="")
   color("RC"), print("Texto color Rojo Claro")
   
   #~ Sabiendo usar 'end' podrías simplificar lo anterior de la siguiente manera,
   #~ pero esto provocara que la flecha se mantenga con el mismo color que en el texto en ese mismo print()
+  
   color("xA"), print("Texto Verde Claro", end=" ---> ")
   color("xD"), print("Texto color Púrpura Claro")
   
   #~ Se puede añadir también de la siguiente manera, incluyendo la llamada a la función dentro del print()
   #~ pero sumandola despues de la cadena.
-  #~ Es recomendable que por cada color nuevo que se desee agregar se use en diferentes print() ya que si se colocan
-  #~ 2 llamadas a una función en el mismo print(), se pondrá la linea con el color de la última llamada a función.
+  #~ Es recomendable que por cada color nuevo que se desee agregar se use en diferentes print() ya que si
+  #~ se colocan dos llamadas a una función en el mismo print(), se pondrá la linea con el color de la última
+  #~ llamada a función.
+  
   print("\n\n\t Texto colo Blanco Brillante"+color("xF"), end="")
   print(" Texto color Verde Claro"+color("VC"))
+  
   ```
   
 ## rest()
-  El método `rest()` Restaura al color por defecto de la ventana.
+  La función `rest()` Restaura al color por defecto de la ventana.
   
 ## Dat()
-  El método `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
+  La función `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
+  
+## flush()
+  La función `flush()` es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
+  Para usar esta función simplemente se tiene que colocar el nombre `flush()` antes de la función `color()` con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
   
