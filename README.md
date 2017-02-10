@@ -3,11 +3,9 @@
 
 ### Modo de Uso:
 
-Tienes que importar el modulo WinColor a tu Script: `import WinColor`
-, esto te permitira usar los metodos: `WinColor.color()`, `WinColor.rest()`, `WinColor.Dat()`, etc...
+Tienes que importar el modulo WinColor a tu Script: `import WinColor`, esto te permitira usar los metodos: `WinColor.color()`, `WinColor.rest()`, `WinColor.Dat()`, etc...
   
-//Importar de la siguiente manera evitará escribir demasiado: `from WinColor import *`.
-De esta manera podras llamar a los métodos sin necesidad de especificar antes el modulo: `WinColor.Dat()` ---> `Dat()`
+Para importar todo, se escribe de la siguiente manera y así se evitará escribir demasiado: `from WinColor import *`, de esta manera se podrá llamar a los métodos sin necesidad de especificar el nombre del módulo: `WinColor.Dat()` ---> `Dat()`
 
 
 ### Funciones Disponibles:
@@ -37,12 +35,12 @@ WinColor.HiddenCursor()
     #~ Ejemplos:
     color("x0"), color("negro"), color("N")
     ```
-### xD
+## color()
 
 Lista De Colores:
 
 | Color            | X  | Nombre        | Indice |
-| :--------------- |:--:| :-----------: | :----: |
+|:-----------------|:--:|:-------------:|:------:|
 | Negro            | x0 | negro         | N      |
 | Azul             | x1 | azul          | AZ     |
 | Verde            | x2 | verde         | V      |
@@ -59,11 +57,6 @@ Lista De Colores:
 | Púrpura Claro    | xD | purpura cl    | PC     |
 | Amarillo Claro   | xE | amarillo cl   | AMC    |
 | Blanco Brillante | xF | blanco br     | BB     |
-
-
-  + El metodo `rest()` Restaura al color por defecto de la ventana.
-  
-  + El método `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
   
   Ejemplos de uso:
   
@@ -80,5 +73,8 @@ Lista De Colores:
   print("\n\n\t Esta linea tiene ahora el color por defecto de la ventana de comandos")
   ```
   
-  
+## rest()
+  El metodo `rest()` Restaura al color por defecto de la ventana.
+## Dat()
+  El método `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
   
