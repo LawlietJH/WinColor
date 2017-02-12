@@ -186,4 +186,21 @@ xD = inp("Escribe Algo: ")
 ``` 
 
 
-==========================================================
+## WinSize()
+
+Cambia el tamaño de la ventana al antojo.
+
+### Modo de Uso:
+
+Por Defecto pondra el tamaño de la ventana en __Ancho=82__, __Alto=55__
+```python
+WinSize()
+```
+
+Pondra el tamaño de la ventana en __Ancho=50__, __Alto=25__
+```python
+WinSize(50,25)
+```
+
+
+==================================================================================
