@@ -161,6 +161,16 @@ Devuelve True si el sistema operativo es Linux
 
 Devuelve True si la versión de Python es 2.X
 
+
 ## isPyver3()
 
 Devuelve True si la versión de Python es 3.X
+
+
+## Clear()
+
+Limpia pantalla, compatible con cualquier Sistema Operativo.
+
+
+==============================================================
+
