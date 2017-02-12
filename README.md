@@ -172,5 +172,18 @@ Devuelve True si la versión de Python es 3.X
 Limpia pantalla, compatible con cualquier Sistema Operativo.
 
 
-==============================================================
+## inp()
 
+Permite escribir en pantalla, compatible con cualquier Versión de Python.
+
+### Modo de uso:
+
+Se le pasa la cadena que se imprimir en pantalla para pedir datos.
+Se usa de la misma manera en que se usaria ___raw_input()___ en Python 2 e ___input()___ en python 3.
+
+```python
+xD = inp("Escribe Algo: ")
+``` 
+
+
+==========================================================
