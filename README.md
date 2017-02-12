@@ -152,3 +152,8 @@ En Pantalla:
 Devuelve True si el sistema operativo es Windows
 
 
+## isLinux()
+
+Devuelve True si el sistema operativo es Linux
+
+
