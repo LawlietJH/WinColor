@@ -220,3 +220,23 @@ ChkMod("os")
 ```
 
 
+## HiddenCursor()
+
+Oculta o Muestra el Cursor en Pantalla.
+
+### Modo de Uso:
+
+Por Defecto, ocultará el Cursor solo Mandando a llamar la función.
+```python
+HiddenCursor()
+```
+
+Para Ocultar/Desocultar el Cursor puedes mandar a llamar la función de las sigueintes maneras.
+```python
+
+#~ Para ocultar.
+HiddenCursor("Hidden")
+
+#~ Para mostrar.
+HiddenCursor("Show")
+```
