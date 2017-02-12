@@ -203,4 +203,20 @@ WinSize(50,25)
 ```
 
 
-==================================================================================
+## ChkMod()
+
+Mostrará Todos Método de Algún Módulo.
+
+### Modo de Uso:
+
+Esto mostrará todas las funciones del __Módulo__: ___sys___
+```python
+ChkMod("sys")
+```
+
+Esto mostrará todas las funciones del __Módulo__: ___os___
+```python
+ChkMod("os")
+```
+
+
