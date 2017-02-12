@@ -157,3 +157,8 @@ Devuelve True si el sistema operativo es Windows
 Devuelve True si el sistema operativo es Linux
 
 
+## isPyver2()
+
+Devuelve True si la versión de Python es 2.X
+
+
