@@ -3,10 +3,11 @@
 
 ### Modo de Uso:
 
-Tienes que importar el módulo WinColor a tu Script: `import WinColor`, esto te permitirá usar los métodos: `WinColor.color()`, `WinColor.rest()`, `WinColor.Dat()`, etc...
++ Tienes que importar el módulo WinColor a tu Script: `import WinColor`, esto te permitirá usar los métodos: `WinColor.color()`, `WinColor.rest()`, `WinColor.Dat()`, etc...
   
-Para importar todo, se escribe de la siguiente manera y así se evitará escribir demasiado: `from WinColor import *`, de esta manera se podrá llamar a los métodos sin necesidad de especificar el nombre del módulo: `WinColor.Dat()` ---> `Dat()`
++ Para importar todo, se escribe de la siguiente manera y así se evitará escribir demasiado: `from WinColor import *`, de esta manera se podrá llamar a los métodos sin necesidad de especificar el nombre del módulo: `WinColor.Dat()` ---> `Dat()`
 
+---
 
 ### Funciones Disponibles:
 
@@ -36,7 +37,7 @@ Para importar todo, se escribe de la siguiente manera y así se evitará escribi
 color("x0"), color("negro"), color("N")
 ```
     
-Lista De Colores:
++ Lista De Colores:
 
 | Color            | Hex | Nombre        | Índice |
 |:-----------------|:---:|:-------------:|:------:|
@@ -57,7 +58,7 @@ Lista De Colores:
 | Amarillo Claro   | xE  | amarillo cl   | AMC    |
 | Blanco Brillante | xF  | blanco br     | BB     |
 
-  Ejemplos de uso:
++ Ejemplos de uso:
   
   ```python
   
@@ -101,32 +102,35 @@ Lista De Colores:
 ---
   
 ## rest()
-  La función `rest()` Restaura al color por defecto de la ventana.
+
++ La función `rest()` Restaura al color por defecto de la ventana.
 
 ---
 
 ## Dat()
-  La función `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
+ 
++ La función `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
 
 ---
 
 ## flush()
-  La función `flush()` es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
-  Para usar esta función simplemente se tiene que colocar el nombre `flush()` antes de la función `color()` con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
+ + La función `flush()` es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
+  
+ + Para usar esta función simplemente se tiene que colocar el nombre `flush()` antes de la función `color()` con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
 
 ---
 
 ## Mark()
 
-  Esta simple y a su vez practica función, permite añadir cuadros con símbolos, [+], [-], [!], etc., para poder imprimir en pantalla con colores personalizados de forma rápida y practica.
++ Esta simple y a su vez practica función, permite añadir cuadros con símbolos, [+], [-], [!], etc., para poder imprimir en pantalla con colores personalizados de forma rápida y practica.
   
 #### Modo de uso:
   
-Por defecto: `Mark()`.
-Llamar la función de esta manera, por defecto imprimirá en pantalla: `[ ]` 
-La cual tendra Corchetes color Blanco Brillante y sin ningun Símbolo.
++ Por defecto: `Mark()`.
+  Llamar la función de esta manera, por defecto imprimirá en pantalla: `[ ]` 
+  La cual tendra Corchetes color Blanco Brillante y sin ningun Símbolo.
    
-Lista De Usos Por defecto:
++ Lista De Usos Por defecto:
   
    
 | Función    |Símbolo |Color de Flecha   |Color de Símbolo  |Color de Corchetes|En Pantalla|
@@ -143,7 +147,7 @@ Lista De Usos Por defecto:
 |`Mark("&")` | &      |                  | Verde Claro      | Aguamarina Claro | `[&]`     |
 |`Mark("?")` | ?      |                  | Amarillo Claro   | Aguamarina Claro | `[?]`     |
 
-Ejemplos:
++ Ejemplos:
   
   ```python
    #~ Siempre se tiene que añadir fuera del print()
@@ -151,7 +155,7 @@ Ejemplos:
   print("\n\n\t", end=""), Mark(), print(" Hey!")
   print("\n\t", end=""), Mark("!","VC","BB"), print(" Hola Mundo!")
   ```
-En Pantalla:
++ En Pantalla:
   
 ####~ Imagen Pendiente. xD
 
@@ -159,42 +163,43 @@ En Pantalla:
 
 ## isWindows()
 
-Devuelve True si el sistema operativo es Windows
++ Devuelve True si el sistema operativo es Windows
 
 ---
 
 ## isLinux()
 
-Devuelve True si el sistema operativo es Linux
++ Devuelve True si el sistema operativo es Linux
 
 ---
 
 ## isPyver2()
 
-Devuelve True si la versión de Python es 2.X
++ Devuelve True si la versión de Python es 2.X
 
 ---
 
 ## isPyver3()
 
-Devuelve True si la versión de Python es 3.X
++ Devuelve True si la versión de Python es 3.X
 
 ---
 
 ## Clear()
 
-Limpia pantalla, compatible con cualquier Sistema Operativo.
++ Limpia pantalla, compatible con cualquier Sistema Operativo.
 
 ---
 
 ## inp()
 
-Permite escribir en pantalla, compatible con cualquier Versión de Python.
++ Permite escribir en pantalla, compatible con cualquier Versión de Python.
 
-### Modo de uso:
+#### Modo de uso:
 
-Se le pasa la cadena que se imprimir en pantalla para pedir datos.
-Se usa de la misma manera en que se usaria ___raw_input()___ en Python 2 e ___input()___ en python 3.
++ Se le pasa la cadena que se imprimir en pantalla para pedir datos.
+
++ Se usa de la misma manera en que se usaria ___raw_input()___ en Python 2 o ___input()___ en python 3.
 
 ```python
 xD = inp("Escribe Algo: ")
@@ -204,16 +209,16 @@ xD = inp("Escribe Algo: ")
 
 ## WinSize()
 
-Cambia el tamaño de la ventana al antojo.
++ Cambia el tamaño de la ventana al antojo.
 
-### Modo de Uso:
+#### Modo de Uso:
 
-Por Defecto pondra el tamaño de la ventana en __Ancho=82__, __Alto=55__
++ Por Defecto pondra el tamaño de la ventana en __Ancho=82__, __Alto=55__
 ```python
 WinSize()
 ```
 
-Pondra el tamaño de la ventana en __Ancho=50__, __Alto=25__
++ Pondra el tamaño de la ventana en __Ancho=50__, __Alto=25__
 ```python
 WinSize(50,25)
 ```
@@ -222,16 +227,16 @@ WinSize(50,25)
 
 ## ChkMod()
 
-Mostrará Todos Método de Algún Módulo.
++ Mostrará Todos Método de Algún Módulo.
 
-### Modo de Uso:
+#### Modo de Uso:
 
-Esto mostrará todas las funciones del __Módulo__: ___sys___
++ Esto mostrará todas las funciones del __Módulo__: ___sys___
 ```python
 ChkMod("sys")
 ```
 
-Esto mostrará todas las funciones del __Módulo__: ___os___
++ Esto mostrará todas las funciones del __Módulo__: ___os___
 ```python
 ChkMod("os")
 ```
@@ -240,16 +245,16 @@ ChkMod("os")
 
 ## HiddenCursor()
 
-Oculta o Muestra el Cursor en Pantalla.
++ Oculta o Muestra el Cursor en Pantalla.
 
-### Modo de Uso:
+#### Modo de Uso:
 
-Por Defecto, ocultará el Cursor solo Mandando a llamar la función.
++ Por Defecto, ocultará el Cursor solo Mandando a llamar la función.
 ```python
 HiddenCursor()
 ```
 
-Para Ocultar/Desocultar el Cursor puedes mandar a llamar la función de las sigueintes maneras.
++ Para Ocultar/Desocultar el Cursor puedes mandar a llamar la función de las sigueintes maneras.
 ```python
 
 #~ Para ocultar.
