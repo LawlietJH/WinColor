@@ -125,7 +125,7 @@ Lista De Usos Por defecto:
 |`Mark()`    |Espacio |                  | Negro            | Blanco Brillante |`[ ]`      |
 |`Mark("+")` | +      |                  | Verde Claro      | Blanco Brillante | `[+]`     |
 |`Mark(">+")`| ---> + | Blanco Brillante | Verde Claro      | Blanco Brillante | `---> [+]`|
-|`Mark("-")` | -      |                  | Azul Claro       | Blanco Brillante | `-+]`     |
+|`Mark("-")` | -      |                  | Azul Claro       | Blanco Brillante | `[-]`     |
 |`Mark("!")` | !      |                  | Rojo Claro       | Blanco Brillante | `[!]`     |
 |`Mark("¡")` | ¡      |                  | Amarillo Claro   | Blanco Brillante | `[¡]`     |
 |`Mark("*")` | *      |                  | Aguamarina Claro | Blanco Brillante | `[*]`     |
@@ -145,3 +145,10 @@ Ejemplos:
 En Pantalla:
   
 ####~ Imagen Pendiente. xD
+
+
+## isWindows()
+
+Devuelve True si el sistema operativo es Windows
+
+
