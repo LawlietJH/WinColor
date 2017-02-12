@@ -25,6 +25,7 @@ Para importar todo, se escribe de la siguiente manera y así se evitará escribi
 + `ChkMod()`
 + `HiddenCursor()`
 
+---
 
 ## color()
 
@@ -97,16 +98,24 @@ Lista De Colores:
   
   ```
   
+---
+  
 ## rest()
   La función `rest()` Restaura al color por defecto de la ventana.
-  
+
+---
+
 ## Dat()
   La función `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
-  
+
+---
+
 ## flush()
   La función `flush()` es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
   Para usar esta función simplemente se tiene que colocar el nombre `flush()` antes de la función `color()` con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
-  
+
+---
+
 ## Mark()
 
   Esta simple y a su vez practica función, permite añadir cuadros con símbolos, [+], [-], [!], etc., para poder imprimir en pantalla con colores personalizados de forma rápida y practica.
@@ -146,31 +155,37 @@ En Pantalla:
   
 ####~ Imagen Pendiente. xD
 
+---
 
 ## isWindows()
 
 Devuelve True si el sistema operativo es Windows
 
+---
 
 ## isLinux()
 
 Devuelve True si el sistema operativo es Linux
 
+---
 
 ## isPyver2()
 
 Devuelve True si la versión de Python es 2.X
 
+---
 
 ## isPyver3()
 
 Devuelve True si la versión de Python es 3.X
 
+---
 
 ## Clear()
 
 Limpia pantalla, compatible con cualquier Sistema Operativo.
 
+---
 
 ## inp()
 
@@ -185,6 +200,7 @@ Se usa de la misma manera en que se usaria ___raw_input()___ en Python 2 e ___in
 xD = inp("Escribe Algo: ")
 ``` 
 
+---
 
 ## WinSize()
 
@@ -202,6 +218,7 @@ Pondra el tamaño de la ventana en __Ancho=50__, __Alto=25__
 WinSize(50,25)
 ```
 
+---
 
 ## ChkMod()
 
@@ -219,6 +236,7 @@ Esto mostrará todas las funciones del __Módulo__: ___os___
 ChkMod("os")
 ```
 
+---
 
 ## HiddenCursor()
 
