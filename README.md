@@ -11,20 +11,12 @@
 
 ### Funciones Disponibles:
 
-+ `Dat()`
-+ `color()`
-+ `rest()`
-+ `flush()`
-+ `Mark()`
-+ `isWindows()`
-+ `isLinux()`
-+ `isPyver2()`
-+ `isPyver3()`
-+ `Clear()`
-+ `inp()`
-+ `WinSize()`
-+ `ChkMod()`
-+ `HiddenCursor()`
+| Principales | Booleanas    | Interacción      | Por Parametros  | Extras     |
+|:-----------:|:------------:|:----------------:|:---------------:|:----------:|
+| `color()`   | `isWindows()`| `inp()`          | `HiddenCursor()`| `Clear()`  |
+| `rest()`    | `isLinux()`  | `Mark()`         | `WinSize()`     | `flush()`  |
+|             | `isPyver2()` |                  |                 | `Dat()`    |
+|             | `isPyver3()` |                  |                 | `ChkMod()` |
 
 ---
 
