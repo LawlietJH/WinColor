@@ -11,12 +11,12 @@
 
 ### Funciones Disponibles:
 
-| Principales | Booleanas    | Interacción      | Por Parametros  | Extras     |
-|:-----------:|:------------:|:----------------:|:---------------:|:----------:|
-| `color()`   | `isWindows()`| `inp()`          | `HiddenCursor()`| `Clear()`  |
-| `rest()`    | `isLinux()`  | `Mark()`         | `WinSize()`     | `flush()`  |
-|             | `isPyver2()` |                  |                 | `Dat()`    |
-|             | `isPyver3()` |                  |                 | `ChkMod()` |
+| Principales | Booleanas    | Interacción      | Por Parametros   | Extras     |
+|:-----------:|:------------:|:----------------:|:----------------:|:----------:|
+| `color()`   | `isWindows()`| `inp()`          | `HiddenCursor()` | `Dat()`    |
+| `rest()`    | `isLinux()`  | `Mark()`         | `WinSize()`      | `Clear()`  |
+|             | `isPyver2()` | `ChkMod()`       |                  | `flush()`  |
+|             | `isPyver3()` |                  |                  |            |
 
 ---
 
