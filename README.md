@@ -125,19 +125,21 @@ color("x0"), color("negro"), color("N")
 + Lista De Usos Por defecto:
   
    
-| Función    |Símbolo |Color de Flecha   |Color de Símbolo  |Color de Corchetes|En Pantalla|
-|:-----------|:------:|:----------------:|:----------------:|:----------------:|:---------:|
-|`Mark()`    |Espacio |                  | Negro            | Blanco Brillante |`[ ]`      |
-|`Mark("+")` | +      |                  | Verde Claro      | Blanco Brillante | `[+]`     |
-|`Mark(">+")`| ---> + | Blanco Brillante | Verde Claro      | Blanco Brillante | `---> [+]`|
-|`Mark("-")` | -      |                  | Azul Claro       | Blanco Brillante | `[-]`     |
-|`Mark("!")` | !      |                  | Rojo Claro       | Blanco Brillante | `[!]`     |
-|`Mark("¡")` | ¡      |                  | Amarillo Claro   | Blanco Brillante | `[¡]`     |
-|`Mark("*")` | *      |                  | Aguamarina Claro | Blanco Brillante | `[*]`     |
-|`Mark("~")` | ~      |                  | Blanco Brillante | Verde Claro      | `[~]`     |
-|`Mark("#")` | #      |                  | Gris             | Blanco Brillante | `[#]`     |
-|`Mark("&")` | &      |                  | Verde Claro      | Aguamarina Claro | `[&]`     |
-|`Mark("?")` | ?      |                  | Amarillo Claro   | Aguamarina Claro | `[?]`     |
+| Función        |Símbolo |Color de Flecha   |Color de Símbolo  |Color de Corchetes|En Pantalla|
+|:---------------|:------:|:----------------:|:----------------:|:----------------:|:---------:|
+| `Mark()`       |Espacio |                  | Negro            | Blanco Brillante |`[ ]`      |
+| `Mark("+")`    | +      |                  | Verde Claro      | Blanco Brillante | `[+]`     |
+| `Mark(">+")`   | ---> + | Blanco Brillante | Verde Claro      | Blanco Brillante | `---> [+]`|
+| `Mark("-")`    | -      |                  | Azul Claro       | Blanco Brillante | `[-]`     |
+| `Mark("!")`    | !      |                  | Rojo Claro       | Blanco Brillante | `[!]`     |
+| `Mark("¡")`    | ¡      |                  | Amarillo Claro   | Blanco Brillante | `[¡]`     |
+| `Mark("*")`    | *      |                  | Aguamarina Claro | Blanco Brillante | `[*]`     |
+| `Mark("~")`    | ~      |                  | Blanco Brillante | Verde Claro      | `[~]`     |
+| `Mark("#")`    | #      |                  | Gris             | Blanco Brillante | `[#]`     |
+| `Mark("&")`    | &      |                  | Verde Claro      | Aguamarina Claro | `[&]`     |
+| `Mark("?")`    | ?      |                  | Amarillo Claro   | Aguamarina Claro | `[?]`     |
+| `Mark("Hola")` | Hola   |                  | Blanco Brillante | Blanco Brillante | `[Hola]`  |
+| `Mark(123)`    | 123    |                  | Blanco Brillante | Blanco Brillante | `[123]`   |
 
 + Ejemplos:
   
@@ -146,11 +148,17 @@ color("x0"), color("negro"), color("N")
   
   print("\n\n\t", end=""), Mark(), print(" Hey!")
   print("\n\t", end=""), Mark("!","VC","BB"), print(" Hola Mundo!")
-  ```
-+ En Pantalla:
   
-####~ Imagen Pendiente. xD
-
+  print("\n\n\t Año: ", end=""), Mark(1995)
+  
+  #~ Se le puede pasar una variable a lafunción
+  xD = "2017"
+  print("\n\t Hola Mundo! en el año "), Mar(xD, "VC", "AGMC")
+  
+  #~ Mostraria: Hola Mundo! en el año [2017]
+  #~ Con los colores Verde Claro para el número y Aguamarina Claro para los corchetes. 
+  ```
+  
 ---
 
 ## isWindows()
