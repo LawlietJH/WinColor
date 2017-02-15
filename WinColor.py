@@ -199,7 +199,7 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 		elif Color1 != None and Color2 == None:
 			return print("["+color(Color1), end=""), print(Simbolo+color("AMC"), end=""), print("]"+color(Color1), end="")
 		elif Color1 == None and Color2 != None:
-			return print("["+color("BB"), end=""), print(Simbolo+color(Color2), end=""), print("]"color("BB"), end="")
+			return print("["+color("BB"), end=""), print(Simbolo+color(Color2), end=""), print("]"+color("BB"), end="")
 		elif Color1 == None and Color2 == None:
 			return print("["+color("BB"), end=""), print(Simbolo+color("AMC"), end=""), print("]"+color("BB"), end="")
 	
@@ -235,13 +235,13 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 	
 	elif (Simbolo == "&"):
 		if Color1 != None and Color2 != None:
-			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo+color(Color2), end=""), print("]"+color(Color1), end="")
 		elif Color1 != None and Color2 == None:
-			return color(Color1), print("[", end=""), color("VC"), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo+color("VC"), end=""), print("]"+color(Color1), end="")
 		elif Color1 == None and Color2 != None:
-			return color("AGMC"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("AGMC"), print("]", end="")
+			return print("["+color("AGMC"), end=""), print(Simbolo+color(Color2), end=""), print("]"+color("AGMC"), end="")
 		elif Color1 == None and Color2 == None:
-			return color("AGMC"), print("[", end=""), color("VC"), print(Simbolo, end=""), color("AGMC"), print("]", end="")
+			return print("["+color("AGMC"), end=""), print(Simbolo+color("VC"), end=""), print("]"+color("AGMC"), end="")
 	
 	elif (Simbolo == "?"):
 		if Color1 != None and Color2 != None:
@@ -359,7 +359,7 @@ def ChkMod(nombre):
 	pat=re.compile(nombre,re.IGNORECASE)
 	resultados=[]
 	
-	print("\n\n    ", end=""), Mark("&"), color("BB"), print(" Módulo:", end=""), color("AZC"), print("",nombre, "\n")
+	print("\n\n    ", end=""), Mark("&"), print(" Módulo: "+color("BB"), end=""), print(nombre+color("AZC"), "\n")
 	
 	def callback(p,n,d):
 		if n.endswith(".__init__"):
