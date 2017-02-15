@@ -255,13 +255,13 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 	
 	elif (Simbolo == " "):
 		if Color1 != None and Color2 != None:
-			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo+color(Color2), end=""), print("]"+color(Color1), end="")
 		elif Color1 != None and Color2 == None:
-			return color(Color1), print("[", end=""), color("N"), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo+color("N"), end=""), print("]"+color(Color1), end="")
 		elif Color1 == None and Color2 != None:
-			return color("BB"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("BB"), print("]", end="")
+			return print("["+color("BB"), end=""), print(Simbolo+color(Color2), end=""), print("]"+color("BB"), end="")
 		elif Color1 == None and Color2 == None:
-			return color("BB"), print("[", end=""), color("N"), print(Simbolo, end=""), color("BB"), print("]", end="")
+			return print("["+color("BB"), end=""), print(Simbolo+color("N"), end=""), print("]"+color("BB"), end="")
 	
 	else:
 		if Color1 != None and Color2 != None:
