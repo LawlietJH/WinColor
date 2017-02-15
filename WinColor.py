@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.1.2
+#                                                                 1.1.3
 
 import ctypes
 import time
@@ -37,7 +37,7 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("1.1.2")
+	Version = "\n\n\n{:^80}".format("1.1.3")
 	
 	return os.system("cls"), winsize(80,22),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
@@ -185,13 +185,13 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 	
 	elif (Simbolo == "!"):
 		if Color1 != None and Color2 != None:
-			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo+color(Color2), end=""), print("]"+color(Color1), end="")
 		elif Color1 != None and Color2 == None:
-			return color(Color1), print("[", end=""), color("RC"), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo+color("RC"), end=""), print("]"+color(Color1), end="")
 		elif Color1 == None and Color2 != None:
-			return color("BB"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("BB"), print("]", end="")
+			return print("["+color("BB"), end=""), print(Simbolo+color(Color2), end=""), print("]"+color("BB"), end="")
 		elif Color1 == None and Color2 == None:
-			return color("BB"), print("[", end=""), color("RC"), print(Simbolo, end=""), color("BB"), print("]", end="")
+			return print("["+color("BB"), end=""), print(Simbolo+color("RC"), end=""), print("]"+color("BB"), end="")
 	
 	elif (Simbolo == "¡"):
 		if Color1 != None and Color2 != None:
