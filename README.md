@@ -1,6 +1,8 @@
 # WinColor
 ## Pon Color A Tus Scripts de Python En Windows.
 
+## Por: LawlietJH - v1.1.3
+
 ### Modo de Uso:
 
 + Tienes que importar el módulo WinColor a tu Script: `import WinColor`, esto te permitirá usar los métodos: `WinColor.color()`, `WinColor.rest()`, `WinColor.Dat()`, etc...
