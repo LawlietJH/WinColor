@@ -215,13 +215,13 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 	
 	elif (Simbolo == "~"):
 		if Color1 != None and Color2 != None:
-			return color(Color1), print("[", end=""), color(Color2), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo+color(Color2), end=""), print("]"+color(Color1), end="")
 		elif Color1 != None and Color2 == None:
-			return color(Color1), print("[", end=""), color("BB"), print(Simbolo, end=""), color(Color1), print("]", end="")
+			return print("["+color(Color1), end=""), print(Simbolo+color("BB"), end=""), print("]"+color(Color1), end="")
 		elif Color1 == None and Color2 != None:
-			return color("VC"), print("[", end=""), color(Color2), print(Simbolo, end=""), color("VC"), print("]", end="")
+			return print("["+color("VC"), end=""), print(Simbolo+color(Color2), end=""), print("]"+color("VC"), end="")
 		elif Color1 == None and Color2 == None:
-			return color("VC"), print("[", end=""), color("BB"), print(Simbolo, end=""), color("VC"), print("]", end="")
+			return print("["+color("VC"), end=""), print(Simbolo+color("BB"), end=""), print("]"+color("VC"), end="")
 	
 	elif (Simbolo == "#"):
 		if Color1 != None and Color2 != None:
