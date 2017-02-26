@@ -376,6 +376,8 @@ def ChkMod(nombre):
 	return resultados
 
 
+#~ Función Que Permite Esconder El Texto de la Pantalla.
+#~ Para escribrir por ejemplo contraseñas y evitar a los curiosos.
 def Pass(Text=""):
 	
 	from getpass import getpass as pwd
