@@ -17,7 +17,7 @@
 |:-------------------:|:-----------------:|:----------------:|:----------:|:------------:|
 | [`color()`](#color) | [`inp()`](#inp)   | `HiddenCursor()` | `Dat()`    | `isWindows()`|
 | [`rest()`](#rest)   | [`Mark()`](#Mark) | `WinSize()`      | `Clear()`  | `isLinux()`  |
-|                     | `Pass()`          | `ChkMod()`       | `flush()`  | `isPyver2()` |
+|                     | [`Pass()`](#Pass) | `ChkMod()`       | `flush()`  | `isPyver2()` |
 |                     |                   |                  |            | `isPyver3()` |
 
 ---
@@ -174,6 +174,7 @@ xD = inp("Escribe Algo: ")
   
 ---
 
+<a name="Pass"/>
 ## Pass()
 
 + Permite escribir en pantalla de forma __oculta__, útil para escribir __contraseñas__.
