@@ -13,12 +13,12 @@
 
 ### Funciones Disponibles:
 
-| Principales         | Interacción       | Parametros       | Extras     | Booleanas    |
-|:-------------------:|:-----------------:|:----------------:|:----------:|:------------:|
-| [`color()`](#color) | [`inp()`](#inp)   | `HiddenCursor()` | `Dat()`    | `isWindows()`|
-| [`rest()`](#rest)   | [`Mark()`](#Mark) | `WinSize()`      | `Clear()`  | `isLinux()`  |
-|                     | [`Pass()`](#Pass) | `ChkMod()`       | `flush()`  | `isPyver2()` |
-|                     |                   |                  |            | `isPyver3()` |
+| Principales         | Interacción       | Parametros				  | Extras     | Booleanas    |
+|:-------------------:|:-----------------:|:-------------------------:|:----------:|:------------:|
+| [`color()`](#color) | [`inp()`](#inp)   | [`HiddenCursor()`](#HiCu) | `Dat()`    | `isWindows()`|
+| [`rest()`](#rest)   | [`Mark()`](#Mark) | `WinSize()`               | `Clear()`  | `isLinux()`  |
+|                     | [`Pass()`](#Pass) | `ChkMod()`                | `flush()`  | `isPyver2()` |
+|                     |                   |                           |            | `isPyver3()` |
 
 ---
 <a name="color"/>
@@ -177,7 +177,7 @@ xD = inp("Escribe Algo: ")
 <a name="Pass"/>
 ## Pass()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L380)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L379)
 
 + Permite escribir en pantalla de forma __oculta__, útil para escribir __contraseñas__.
 
@@ -190,7 +190,7 @@ xD = Pass("Escribe la contraseña:")
 ```
 
 ---
-
+<a name="HiCu"/>
 ## HiddenCursor()
 
 + __Oculta o Muestra el Puntero en Pantalla__.
