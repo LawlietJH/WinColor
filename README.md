@@ -182,16 +182,16 @@ xD = Pass("Escribe la contraseña:")
 
 ## HiddenCursor()
 
-+ __Oculta o Muestra el Cursor en Pantalla__.
++ __Oculta o Muestra el Puntero en Pantalla__.
 
 #### Modo de Uso:
 
-+ Por Defecto, __ocultará el Cursor__ solo Mandando a llamar la función.
++ Por Defecto, __ocultará el Puntero__ con solo Mandar a llamar la función.
 ```python
 HiddenCursor()
 ```
 
-+ Para __Ocultar/Desocultar__ el Cursor puedes mandar a llamar la función de las sigueintes maneras.
++ Para __Ocultar/Desocultar__ el Puntero puedes mandar a llamar la función de las siguientes maneras.
 ```python
 
 #~ Para ocultar.
