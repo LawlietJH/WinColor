@@ -11,6 +11,10 @@
 
 ---
 
+[WinColor.**color()**](#WinColor.color)
+
+---
+
 ### Funciones Disponibles:
 
 | Principales | Interacción      | Parametros       | Extras     | Booleanas    |
@@ -22,8 +26,10 @@
 
 ---
 
+<a name="WinColor.color"/>
 ## color()
-
+  = color
+  
 ### La función `color()` requiere una serie de parámetros, puede ser cualquiera de la siguiente lista:
 
 ```python
