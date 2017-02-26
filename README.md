@@ -5,9 +5,9 @@
 
 ### Modo de Uso:
 
-+ Tienes que importar el módulo WinColor a tu Script: `import WinColor`, esto te permitirá usar los métodos: `WinColor.color()`, `WinColor.rest()`, `WinColor.Dat()`, etc...
++ Tienes que importar el módulo WinColor a tu Script: __`import WinColor`__, esto te permitirá usar los métodos: __`WinColor.color()`, `WinColor.rest()`, `WinColor.Dat()`__, etc...
   
-+ Para importar todo, se escribe de la siguiente manera y así se evitará escribir demasiado: `from WinColor import *`, de esta manera se podrá llamar a los métodos sin necesidad de especificar el nombre del módulo: `WinColor.Dat()` ---> `Dat()`
++ Para importar todo, se escribe de la siguiente manera y así se evitará escribir demasiado: __`from WinColor import *`__, de esta manera se podrá llamar a los métodos sin necesidad de especificar el nombre del módulo: __`WinColor.Dat()` ---> `Dat()`__
 
 ---
 
