@@ -193,6 +193,8 @@ xD = Pass("Escribe la contraseña:")
 <a name="HiCu"/>
 ## HiddenCursor()
 
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L390)
+
 + __Oculta o Muestra el Puntero en Pantalla__.
 
 #### Modo de Uso:
