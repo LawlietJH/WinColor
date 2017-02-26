@@ -20,9 +20,10 @@
 |                     | `Pass()`         | `ChkMod()`       | `flush()`  | `isPyver2()` |
 |                     |                  |                  |            | `isPyver3()` |
 
----
 
 <a name="color"/>
+---
+
 ## color()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L89)
@@ -96,17 +97,21 @@ color("x0"), color("negro"), color("N")
   
   ```
   
----
 <a name="rest"/>  
+---
+
 ## rest()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L135)
 
 + La función __`rest()`__ Restaura al color por defecto de la ventana.
 
----
 <a name="inp"/>
+---
+
 ## inp()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L338)
 
 + Función que hace compatible __escribir en pantalla en cualquier Versión de Python__.
 
