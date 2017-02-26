@@ -13,17 +13,15 @@
 
 ### Funciones Disponibles:
 
-| Principales         | Interacción      | Parametros       | Extras     | Booleanas    |
-|:-------------------:|:----------------:|:----------------:|:----------:|:------------:|
-| [`color()`](#color) | [`inp()`](#inp)  | `HiddenCursor()` | `Dat()`    | `isWindows()`|
-| [`rest()`](#rest)   | `Mark()`         | `WinSize()`      | `Clear()`  | `isLinux()`  |
-|                     | `Pass()`         | `ChkMod()`       | `flush()`  | `isPyver2()` |
-|                     |                  |                  |            | `isPyver3()` |
+| Principales         | Interacción       | Parametros       | Extras     | Booleanas    |
+|:-------------------:|:-----------------:|:----------------:|:----------:|:------------:|
+| [`color()`](#color) | [`inp()`](#inp)   | `HiddenCursor()` | `Dat()`    | `isWindows()`|
+| [`rest()`](#rest)   | [`Mark()`](#Mark) | `WinSize()`      | `Clear()`  | `isLinux()`  |
+|                     | `Pass()`          | `ChkMod()`       | `flush()`  | `isPyver2()` |
+|                     |                   |                  |            | `isPyver3()` |
 
-
-<a name="color"/>
 ---
-
+<a name="color"/>
 ## color()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L89)
@@ -97,18 +95,16 @@ color("x0"), color("negro"), color("N")
   
   ```
   
-<a name="rest"/>  
 ---
-
+<a name="rest"/>  
 ## rest()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L135)
 
 + La función __`rest()`__ Restaura al color por defecto de la ventana.
 
-<a name="inp"/>
 ---
-
+<a name="inp"/>
 ## inp()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L338)
@@ -126,7 +122,7 @@ xD = inp("Escribe Algo: ")
 ``` 
 
 ---
-
+<a name="Mark"/>
 ## Mark()
 
 + Esta simple y a su vez practica función, permite añadir cuadros con símbolos, __[+], [-], [!],__ etc., para poder imprimir en pantalla con colores personalizados de forma rápida y practica.
