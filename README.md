@@ -25,7 +25,7 @@
 <a name="color"/>
 ## color()
 
-[\[Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L89)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L89)
 
 ### La función `color()` requiere una serie de parámetros, puede ser cualquiera de la siguiente lista:
 
@@ -99,6 +99,8 @@ color("x0"), color("negro"), color("N")
 ---
 <a name="rest"/>  
 ## rest()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L135)
 
 + La función __`rest()`__ Restaura al color por defecto de la ventana.
 
