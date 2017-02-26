@@ -97,13 +97,13 @@ color("x0"), color("negro"), color("N")
   
 ## rest()
 
-+ La función `rest()` Restaura al color por defecto de la ventana.
++ La función __`rest()`__ Restaura al color por defecto de la ventana.
 
 ---
 
 ## inp()
 
-+ Permite escribir en pantalla, compatible con cualquier Versión de Python.
++ Función que hace compatible __escribir en pantalla en cualquier Versión de Python__.
 
 #### Modo de uso:
 
@@ -119,13 +119,13 @@ xD = inp("Escribe Algo: ")
 
 ## Mark()
 
-+ Esta simple y a su vez practica función, permite añadir cuadros con símbolos, [+], [-], [!], etc., para poder imprimir en pantalla con colores personalizados de forma rápida y practica.
++ Esta simple y a su vez practica función, permite añadir cuadros con símbolos, __[+], [-], [!],__ etc., para poder imprimir en pantalla con colores personalizados de forma rápida y practica.
   
 #### Modo de uso:
   
-+ Por defecto: `Mark()`.
-  Llamar la función de esta manera, por defecto imprimirá en pantalla: `[ ]` 
-  La cual tendra Corchetes color Blanco Brillante y sin ningun Símbolo.
++ Por defecto: __`Mark()`__.
+  Llamar la función de esta manera, por defecto imprimirá en pantalla: __`[ ]`__ 
+  La cual tendra __Corchetes color Blanco Brillante y sin ningun Símbolo__.
    
 + Lista De Usos Por defecto:
   
@@ -158,7 +158,7 @@ xD = inp("Escribe Algo: ")
   
   #~ Se le puede pasar una variable a lafunción
   xD = "2017"
-  print("\n\t Hola Mundo! en el año "), Mar(xD, "VC", "AGMC")
+  print("\n\t Hola Mundo! en el año "), Mark(xD, "VC", "AGMC")
   
   #~ Mostraria: Hola Mundo! en el año [2017]
   #~ Con los colores Verde Claro para el número y Aguamarina Claro para los corchetes. 
@@ -168,7 +168,7 @@ xD = inp("Escribe Algo: ")
 
 ## Pass()
 
-+ Permite escribir en pantalla de forma oculta, útil para escribir contraseñas.
++ Permite escribir en pantalla de forma __oculta__, útil para escribir __contraseñas__.
 
 #### Modo de Uso:
 
@@ -182,16 +182,16 @@ xD = Pass("Escribe la contraseña:")
 
 ## HiddenCursor()
 
-+ Oculta o Muestra el Cursor en Pantalla.
++ __Oculta o Muestra el Cursor en Pantalla__.
 
 #### Modo de Uso:
 
-+ Por Defecto, ocultará el Cursor solo Mandando a llamar la función.
++ Por Defecto, __ocultará el Cursor__ solo Mandando a llamar la función.
 ```python
 HiddenCursor()
 ```
 
-+ Para Ocultar/Desocultar el Cursor puedes mandar a llamar la función de las sigueintes maneras.
++ Para __Ocultar/Desocultar__ el Cursor puedes mandar a llamar la función de las sigueintes maneras.
 ```python
 
 #~ Para ocultar.
@@ -209,12 +209,12 @@ HiddenCursor("Show")
 
 #### Modo de Uso:
 
-+ Por Defecto pondra el tamaño de la ventana en __Ancho=82__, __Alto=55__
++ Por Defecto pondra el tamaño de la ventana en __Ancho=82, Alto=55__
 ```python
 WinSize()
 ```
 
-+ Pondra el tamaño de la ventana en __Ancho=50__, __Alto=25__
++ Pondra el tamaño de la ventana en __Ancho=50, Alto=25__
 ```python
 WinSize(50,25)
 ```
@@ -241,41 +241,41 @@ ChkMod("os")
 
 ## Dat()
  
-+ La función `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
++ La función __`Dat()`__ limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
 
 ---
 
 ## Clear()
 
-+ Limpia pantalla, compatible con cualquier Sistema Operativo.
++ Función que hace compatible __limpiar pantalla__ en cualquier Sistema Operativo (__Linux, Windows__, etc).
 
 ---
 
 ## flush()
- + La función `flush()` es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
+ + La función __`flush()`__ es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
   
- + Para usar esta función simplemente se tiene que colocar el nombre `flush()` antes de la función `color()` con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
+ + Para usar esta función simplemente se tiene que colocar el nombre __`flush()`__ antes de la función __`color()`__ con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
 
 ---
 
 ## isWindows()
 
-+ Devuelve True si el sistema operativo es Windows
++ Devuelve __True__ si el sistema operativo es __Windows__
 
 ---
 
 ## isLinux()
 
-+ Devuelve True si el sistema operativo es Linux
++ Devuelve __True__ si el sistema operativo es __Linux__
 
 ---
 
 ## isPyver2()
 
-+ Devuelve True si la versión de Python es 2.X
++ Devuelve __True__ si la versión de __Python__ es 2.X
 
 ---
 
 ## isPyver3()
 
-+ Devuelve True si la versión de Python es 3.X
++ Devuelve __True__ si la versión de __Python__ es 3.X
