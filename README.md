@@ -25,6 +25,8 @@
 <a name="color"/>
 ## color()
 
+[\[Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L89)
+
 ### La función `color()` requiere una serie de parámetros, puede ser cualquiera de la siguiente lista:
 
 ```python
