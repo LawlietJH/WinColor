@@ -15,7 +15,7 @@
 
 | Principales         | Interacción      | Parametros       | Extras     | Booleanas    |
 |:-------------------:|:----------------:|:----------------:|:----------:|:------------:|
-| [`color()`](#color) | `inp()`          | `HiddenCursor()` | `Dat()`    | `isWindows()`|
+| [`color()`](#color) | [`inp()`](#inp)  | `HiddenCursor()` | `Dat()`    | `isWindows()`|
 | [`rest()`](#rest)   | `Mark()`         | `WinSize()`      | `Clear()`  | `isLinux()`  |
 |                     | `Pass()`         | `ChkMod()`       | `flush()`  | `isPyver2()` |
 |                     |                  |                  |            | `isPyver3()` |
@@ -105,7 +105,7 @@ color("x0"), color("negro"), color("N")
 + La función __`rest()`__ Restaura al color por defecto de la ventana.
 
 ---
-
+<a name="inp"/>
 ## inp()
 
 + Función que hace compatible __escribir en pantalla en cualquier Versión de Python__.
