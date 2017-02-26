@@ -376,6 +376,15 @@ def ChkMod(nombre):
 	return resultados
 
 
+def Pass(Text=""):
+	
+	from getpass import getpass as pwd
+	
+	Pwd = pwd(Text)
+	
+	return Pwd
+
+
 #~ Función Que Permite Esconder El Cursor de la Pantalla (La rayita que parpadea xD).
 def HiddenCursor(imp="Hidden"):
 	
