@@ -11,25 +11,20 @@
 
 ---
 
-[WinColor.**color()**](#WinColor.color)
-
----
-
 ### Funciones Disponibles:
 
-| Principales | Interacción      | Parametros       | Extras     | Booleanas    |
-|:-----------:|:----------------:|:----------------:|:----------:|:------------:|
-| `color()`   | `inp()`          | `HiddenCursor()` | `Dat()`    | `isWindows()`|
-| `rest()`    | `Mark()`         | `WinSize()`      | `Clear()`  | `isLinux()`  |
-|             | `Pass()`         | `ChkMod()`       | `flush()`  | `isPyver2()` |
-|             |                  |                  |            | `isPyver3()` |
+| Principales         | Interacción      | Parametros       | Extras     | Booleanas    |
+|:-------------------:|:----------------:|:----------------:|:----------:|:------------:|
+| [`color()`](#color) | `inp()`          | `HiddenCursor()` | `Dat()`    | `isWindows()`|
+| `rest()`            | `Mark()`         | `WinSize()`      | `Clear()`  | `isLinux()`  |
+|                     | `Pass()`         | `ChkMod()`       | `flush()`  | `isPyver2()` |
+|                     |                  |                  |            | `isPyver3()` |
 
 ---
 
-<a name="WinColor.color"/>
+<a name="color"/>
 ## color()
-  = color
-  
+
 ### La función `color()` requiere una serie de parámetros, puede ser cualquiera de la siguiente lista:
 
 ```python
