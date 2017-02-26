@@ -125,6 +125,8 @@ xD = inp("Escribe Algo: ")
 <a name="Mark"/>
 ## Mark()
 
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L158)
+
 + Esta simple y a su vez practica función, permite añadir cuadros con símbolos, __[+], [-], [!],__ etc., para poder imprimir en pantalla con colores personalizados de forma rápida y practica.
   
 #### Modo de uso:
