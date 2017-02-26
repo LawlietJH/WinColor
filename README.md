@@ -16,7 +16,7 @@
 | Principales         | Interacción      | Parametros       | Extras     | Booleanas    |
 |:-------------------:|:----------------:|:----------------:|:----------:|:------------:|
 | [`color()`](#color) | `inp()`          | `HiddenCursor()` | `Dat()`    | `isWindows()`|
-| `rest()`            | `Mark()`         | `WinSize()`      | `Clear()`  | `isLinux()`  |
+| [`rest()`](#rest)   | `Mark()`         | `WinSize()`      | `Clear()`  | `isLinux()`  |
 |                     | `Pass()`         | `ChkMod()`       | `flush()`  | `isPyver2()` |
 |                     |                  |                  |            | `isPyver3()` |
 
@@ -97,7 +97,7 @@ color("x0"), color("negro"), color("N")
   ```
   
 ---
-  
+<a name="rest"/>  
 ## rest()
 
 + La función __`rest()`__ Restaura al color por defecto de la ventana.
