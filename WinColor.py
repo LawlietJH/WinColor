@@ -338,9 +338,9 @@ def Clear():
 #~ Función Que Permite Imprimir En Pantalla Compatible Con Python Versión 2 y 3, Devuelve Cadena
 def inp(inp):
 	
-	if ispyver3():
+	if isPyver3():
 		return input(inp)
-	elif ispyver2():
+	elif isPyver2():
 		return raw_input(inp)
 
 
