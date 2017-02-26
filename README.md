@@ -1,7 +1,7 @@
 # WinColor
 ## Pon Color A Tus Scripts de Python En Windows.
 
-## Por: LawlietJH - v1.1.3
+## Por: LawlietJH - v1.1.4
 
 ### Modo de Uso:
 
@@ -13,12 +13,12 @@
 
 ### Funciones Disponibles:
 
-| Principales | Booleanas    | Interacción      | Por Parametros   | Extras     |
-|:-----------:|:------------:|:----------------:|:----------------:|:----------:|
-| `color()`   | `isWindows()`| `inp()`          | `HiddenCursor()` | `Dat()`    |
-| `rest()`    | `isLinux()`  | `Mark()`         | `WinSize()`      | `Clear()`  |
-|             | `isPyver2()` | `ChkMod()`       |                  | `flush()`  |
-|             | `isPyver3()` |                  |                  |            |
+| Principales | Interacción      | Parametros       | Extras     | Booleanas    |
+|:-----------:|:----------------:|:----------------:|:----------:|:------------:|
+| `color()`   | `inp()`          | `HiddenCursor()` | `Dat()`    | `isWindows()`|
+| `rest()`    | `Mark()`         | `WinSize()`      | `Clear()`  | `isLinux()`  |
+|             | `Pass()`         | `ChkMod()`       | `flush()`  | `isPyver2()` |
+|             |                  |                  |            | `isPyver3()` |
 
 ---
 
@@ -101,16 +101,19 @@ color("x0"), color("negro"), color("N")
 
 ---
 
-## Dat()
- 
-+ La función `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
+## inp()
 
----
++ Permite escribir en pantalla, compatible con cualquier Versión de Python.
 
-## flush()
- + La función `flush()` es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
-  
- + Para usar esta función simplemente se tiene que colocar el nombre `flush()` antes de la función `color()` con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
+#### Modo de uso:
+
++ Se le pasa la cadena que se imprimir en pantalla para pedir datos.
+
++ Se usa de la misma manera en que se usaria ___raw_input()___ en Python 2 o ___input()___ en python 3.
+
+```python
+xD = inp("Escribe Algo: ")
+``` 
 
 ---
 
@@ -163,49 +166,40 @@ color("x0"), color("negro"), color("N")
   
 ---
 
-## isWindows()
+## Pass()
 
-+ Devuelve True si el sistema operativo es Windows
++ Permite escribir en pantalla de forma oculta, útil para escribir contraseñas.
 
----
+#### Modo de Uso:
 
-## isLinux()
++ Con esto, se imprimirá en pantalla el texto que se le pase a la función ___(Por defecto, imprime una cadena vacia)___ y permitirá escribir una cadena de manera ___oculta (para evitar a los curiosos)___ y ésta, se almacenará en una variable para poder utilizarla en el programa.
 
-+ Devuelve True si el sistema operativo es Linux
-
----
-
-## isPyver2()
-
-+ Devuelve True si la versión de Python es 2.X
+```py
+xD = Pass("Escribe la contraseña:")
+```
 
 ---
 
-## isPyver3()
+## HiddenCursor()
 
-+ Devuelve True si la versión de Python es 3.X
++ Oculta o Muestra el Cursor en Pantalla.
 
----
+#### Modo de Uso:
 
-## Clear()
-
-+ Limpia pantalla, compatible con cualquier Sistema Operativo.
-
----
-
-## inp()
-
-+ Permite escribir en pantalla, compatible con cualquier Versión de Python.
-
-#### Modo de uso:
-
-+ Se le pasa la cadena que se imprimir en pantalla para pedir datos.
-
-+ Se usa de la misma manera en que se usaria ___raw_input()___ en Python 2 o ___input()___ en python 3.
-
++ Por Defecto, ocultará el Cursor solo Mandando a llamar la función.
 ```python
-xD = inp("Escribe Algo: ")
-``` 
+HiddenCursor()
+```
+
++ Para Ocultar/Desocultar el Cursor puedes mandar a llamar la función de las sigueintes maneras.
+```python
+
+#~ Para ocultar.
+HiddenCursor("Hidden")
+
+#~ Para mostrar.
+HiddenCursor("Show")
+```
 
 ---
 
@@ -245,23 +239,43 @@ ChkMod("os")
 
 ---
 
-## HiddenCursor()
+## Dat()
+ 
++ La función `Dat()` limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
 
-+ Oculta o Muestra el Cursor en Pantalla.
+---
 
-#### Modo de Uso:
+## Clear()
 
-+ Por Defecto, ocultará el Cursor solo Mandando a llamar la función.
-```python
-HiddenCursor()
-```
++ Limpia pantalla, compatible con cualquier Sistema Operativo.
 
-+ Para Ocultar/Desocultar el Cursor puedes mandar a llamar la función de las sigueintes maneras.
-```python
+---
 
-#~ Para ocultar.
-HiddenCursor("Hidden")
+## flush()
+ + La función `flush()` es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
+  
+ + Para usar esta función simplemente se tiene que colocar el nombre `flush()` antes de la función `color()` con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
 
-#~ Para mostrar.
-HiddenCursor("Show")
-```
+---
+
+## isWindows()
+
++ Devuelve True si el sistema operativo es Windows
+
+---
+
+## isLinux()
+
++ Devuelve True si el sistema operativo es Linux
+
+---
+
+## isPyver2()
+
++ Devuelve True si la versión de Python es 2.X
+
+---
+
+## isPyver3()
+
++ Devuelve True si la versión de Python es 3.X
