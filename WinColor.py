@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.1.3
+#                                                                 1.1.4
 
 import ctypes
 import time
@@ -37,7 +37,7 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("1.1.3")
+	Version = "\n\n\n{:^80}".format("1.1.4")
 	
 	return os.system("cls"), winsize(80,22),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
