@@ -17,7 +17,7 @@
 |:-------------------:|:-----------------:|:-------------------------:|:----------:|:------------:|
 | [`color()`](#color) | [`inp()`](#inp)   | [`HiddenCursor()`](#HiCu) | `Dat()`    | `isWindows()`|
 | [`rest()`](#rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | `Clear()`  | `isLinux()`  |
-|                     | [`Pass()`](#Pass) | `ChkMod()`                | `flush()`  | `isPyver2()` |
+|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)                | `flush()`  | `isPyver2()` |
 |                     |                   |                           |            | `isPyver3()` |
 
 ---
@@ -233,7 +233,7 @@ WinSize(50,25)
 ```
 
 ---
-
+<a name="ChkMod"/>
 ## ChkMod()
 
 + Mostrará Todos Método de Algún Módulo.
