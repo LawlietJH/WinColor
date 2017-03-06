@@ -16,7 +16,7 @@
 | Principales         | Interacción       | Parametros				  | Extras     | Booleanas    |
 |:-------------------:|:-----------------:|:-------------------------:|:----------:|:------------:|
 | [`color()`](#color) | [`inp()`](#inp)   | [`HiddenCursor()`](#HiCu) | `Dat()`    | `isWindows()`|
-| [`rest()`](#rest)   | [`Mark()`](#Mark) | `WinSize()`               | `Clear()`  | `isLinux()`  |
+| [`rest()`](#rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | `Clear()`  | `isLinux()`  |
 |                     | [`Pass()`](#Pass) | `ChkMod()`                | `flush()`  | `isPyver2()` |
 |                     |                   |                           |            | `isPyver3()` |
 
@@ -215,7 +215,7 @@ HiddenCursor("Show")
 ```
 
 ---
-
+<a name="WinSize"/>
 ## WinSize()
 
 + Cambia el tamaño de la ventana al antojo.
