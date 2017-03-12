@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.1.4
+#                                                                 1.1.5
 
 import ctypes
 import time
@@ -37,7 +37,7 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("1.1.4")
+	Version = "\n\n\n{:^80}".format("1.1.5")
 	
 	return os.system("cls"), winsize(80,22),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
@@ -282,15 +282,15 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 ###### ###### ##### ##### Funciones de Uso Extras ##### ##### ###### ######
 
 
+
 #~ Función Que Comprueba si el SO es Windows, Devuelve TRUE/FALSE
 def isWindows():
 	
 	osver = os.popen("ver").read()
 	
-	if osver.find("Windows") > 0:
-		return True
-	else:
-		return False
+	if osver.find("Windows") > 0: return True
+	else: return False
+
 
 
 #~ Función Que Comprueba si el SO es Linux, Devuelve TRUE/FALSE
@@ -298,10 +298,9 @@ def isLinux():
 	
 	osver = os.popen("ver").read()
 	
-	if osver.find("Linux") > 0:
-		return True
-	else:
-		return False
+	if osver.find("Linux") > 0: return True
+	else: return False
+
 
 
 #~ Función Que Comprueba si es Python Versión 2, Devuelve TRUE/FALSE
@@ -309,10 +308,9 @@ def isPyver2():
 	
 	xD=sys.version[0]
 	
-	if int(xD) == 2:
-		return True
-	else:
-		return False
+	if int(xD) == 2: return True
+	else: return False
+
 
 
 #~ Función Que Comprueba si es Python Versión 3, Devuelve TRUE/FALSE
@@ -320,10 +318,24 @@ def isPyver3():
 	
 	xD=sys.version[0]
 	
-	if int(xD) == 3:
-		return True
+	if int(xD) == 3: return True
+	else: return False
+
+
+
+#~ Función Que Permite Saber Si Se Tienen Permisos de Administrador.
+def isAdmin():
+	
+	if isWindows():
+
+		xD = ctypes.windll.shell32.IsUserAnAdmin()
+		
+		if xD == 1: return True
+		else: return False
+	
 	else:
-		return False
+		return "Desconocido"
+
 
 
 #~ Función Que Permite Limpiar Pantalla Compatible Con Diferentes Sistemas Operativos (SO).
@@ -335,19 +347,20 @@ def Clear():
         os.system("clear")	
 
 
+
 #~ Función Que Permite Imprimir En Pantalla Compatible Con Python Versión 2 y 3, Devuelve Cadena
 def inp(inp):
 	
-	if isPyver3():
-		return input(inp)
-	elif isPyver2():
-		return raw_input(inp)
+	if isPyver3(): return input(inp)
+	elif isPyver2(): return raw_input(inp)
+
 
 
 #~ Función Que Permite Cambiar el Tamaño de la Pantalla.
 def WinSize(Ancho=82, Alto=55):
 	
 	os.system("mode con: cols={} lines={}".format(Ancho, Alto))
+
 
 
 #~ Función Que Permite Checar Un Módulo.
@@ -376,6 +389,7 @@ def ChkMod(nombre):
 	return resultados
 
 
+
 #~ Función Que Permite Esconder El Texto de la Pantalla.
 #~ Para escribrir por ejemplo contraseñas y evitar a los curiosos.
 def Pass(Text=""):
@@ -385,6 +399,7 @@ def Pass(Text=""):
 	Pwd = pwd(Text)
 	
 	return Pwd
+
 
 
 #~ Función Que Permite Esconder El Cursor de la Pantalla (La rayita que parpadea xD).
@@ -422,11 +437,10 @@ def HiddenCursor(imp="Hidden"):
 		elif os.name == 'posix':
 			sys.stdout.write("\033[?25h")
 			sys.stdout.flush()
-			
-	if imp == "Hidden":
-		hide_cursor()
-	elif imp =="Show":
-		show_cursor()
-	else:
-		return #print("\n\n\t\t Escribe: Show | Hidden\n\n\n\tEjemplo: Cursor(\"Hidden\")")
+	
+		
+	if imp == "Hidden": hide_cursor()
+	elif imp =="Show": show_cursor()
+	else: return
+
 
