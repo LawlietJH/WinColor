@@ -2,7 +2,7 @@
 ## Pon Color A Tus Scripts de Python En Windows.
 
 - - -
-```diff
+
 
       ██╗    ██╗██╗███╗   ██╗ ██████╗ ██████╗ ██╗      ██████╗ ██████╗ 
       ██║    ██║██║████╗  ██║██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗
@@ -16,7 +16,7 @@
                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴ ╚╝╩ ╩
 
                                      v1.1.5
-```
+
 - - -
 
 ### Modo de Uso:
@@ -29,13 +29,13 @@
 
 ### Funciones Disponibles:
 
-| Principales         | Interacción       | Parametros				        | Extras             | Booleanas            |
-|:-------------------:|:-----------------:|:-------------------------:|:------------------:|:--------------------:|
-| [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)    | [`isWindows()`](#isW)|
-| [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear)| [`isLinux()`](#isL)  |
-|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush)| [`isPyver2()`](#isP2)|
-|                     |                   |                           |                    | [`isPyver3()`](#isP3)|
-|                     |                   |                           |                    | [`isAdmin()`](#isA)  |
+| Principales         | Interacción       | Parametros		    | Extras              | Booleanas             |
+|:-------------------:|:-----------------:|:-------------------------:|:-------------------:|:---------------------:|
+| [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)     | [`isWindows()`](#isW) |
+| [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear) | [`isLinux()`](#isL)   |
+|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush) | [`isPyver2()`](#isP2) |
+|                     |                   |                           |                     | [`isPyver3()`](#isP3) |
+|                     |                   |                           |                     | [`isAdmin()`](#isA)   |
 
 ---
 <a name="Color"/>
@@ -269,12 +269,12 @@ WinSize(50,25)
 
 #### Modo de Uso:
 
-+ Esto mostrará todas las funciones del __Módulo__: ___sys___
++ Esto mostrará todos los archivos del __Módulo__: ___sys___
 ```python
 ChkMod("sys")
 ```
 
-+ Esto mostrará todas las funciones del __Módulo__: ___os___
++ Esto mostrará todos los archivos del __Módulo__: ___os___
 ```python
 ChkMod("os")
 ```
