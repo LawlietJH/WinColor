@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.1.6
+#                                                                 1.1.7
 
 import ctypes
 import time
@@ -37,7 +37,7 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("1.1.5")
+	Version = "\n\n\n{:^80}".format("1.1.7")
 	
 	return os.system("cls"), winsize(80,22),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
@@ -407,6 +407,17 @@ def Pass(Text=""):
 
 
 
+#~ Funcion Que pide escribir una contraseña y si Coincide con la Contraseña
+#~ Que fue pasada a la función con los argumentos, devolvera True.
+def Access(String="\n\n\t Pwd: ", Pwd = "xD"):
+	
+	Cadena = Pass(String)
+	
+	if Cadena == Pwd: return True
+	else: return False
+
+
+
 #~ Función Que Permite Esconder El Cursor de la Pantalla (La rayita que parpadea xD).
 def HiddenCursor(imp="Hide"):
 	
@@ -447,5 +458,5 @@ def HiddenCursor(imp="Hide"):
 	if imp == "Hide": hide_cursor()
 	elif imp =="Show": show_cursor()
 	else: return
-
+	
 
