@@ -15,7 +15,7 @@
 
 | Principales         | Interacción       | Parametros				        | Extras             | Booleanas    |
 |:-------------------:|:-----------------:|:-------------------------:|:------------------:|:------------:|
-| [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)    | `isWindows()`|
+| [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)    | [`isWindows()`](#isW)|
 | [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear)| `isLinux()`  |
 |                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush)| `isPyver2()` |
 |                     |                   |                           |                    | `isPyver3()` |
@@ -292,24 +292,30 @@ ChkMod("os")
  + Para usar esta función simplemente se tiene que colocar el nombre __`flush()`__ antes de la función __`color()`__ con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
 
 ---
+<a name="isW"/>
 
 ## isWindows()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L287)
 
 + Devuelve __True__ si el sistema operativo es __Windows__
 
 ---
+<a name="isL"/>
 
 ## isLinux()
 
 + Devuelve __True__ si el sistema operativo es __Linux__
 
 ---
+<a name="isP2"/>
 
 ## isPyver2()
 
 + Devuelve __True__ si la versión de __Python__ es 2.X
 
 ---
+<a name="isP3"/>
 
 ## isPyver3()
 
