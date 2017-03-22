@@ -17,7 +17,7 @@
 |:-------------------:|:-----------------:|:-------------------------:|:------------------:|:------------:|
 | [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)    | [`isWindows()`](#isW)|
 | [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear)| [`isLinux()`](#isL)  |
-|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush)| `isPyver2()` |
+|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush)| [`isPyver2()`](#isP2)|
 |                     |                   |                           |                    | `isPyver3()` |
 
 ---
@@ -313,6 +313,8 @@ ChkMod("os")
 <a name="isP2"/>
 
 ## isPyver2()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L307)
 
 + Devuelve __True__ si la versión de __Python__ es 2.X
 
