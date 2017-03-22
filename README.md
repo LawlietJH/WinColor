@@ -1,7 +1,7 @@
 # WinColor
 ## Pon Color A Tus Scripts de Python En Windows.
 
-## Por: LawlietJH - v1.1.4
+## Por: LawlietJH - v1.1.5
 
 ### Modo de Uso:
 
@@ -13,12 +13,13 @@
 
 ### Funciones Disponibles:
 
-| Principales         | Interacción       | Parametros				        | Extras             | Booleanas    |
-|:-------------------:|:-----------------:|:-------------------------:|:------------------:|:------------:|
+| Principales         | Interacción       | Parametros				        | Extras             | Booleanas            |
+|:-------------------:|:-----------------:|:-------------------------:|:------------------:|:--------------------:|
 | [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)    | [`isWindows()`](#isW)|
 | [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear)| [`isLinux()`](#isL)  |
 |                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush)| [`isPyver2()`](#isP2)|
-|                     |                   |                           |                    | `isPyver3()` |
+|                     |                   |                           |                    | [`isPyver3()`](#isP3)|
+|                     |                   |                           |                    | [`isAdmin()`](#isA)  |
 
 ---
 <a name="Color"/>
@@ -326,3 +327,12 @@ ChkMod("os")
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L317)
 
 + Devuelve __True__ si la versión de __Python__ es 3.X
+
+---
+<a name="Color"/>
+
+## isAdmin()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L89)
+
++ Devuelve __True__ si el ___Scritp___ se está ejecutando con _Permisos de Administrador_.
