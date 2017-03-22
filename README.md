@@ -323,4 +323,6 @@ ChkMod("os")
 
 ## isPyver3()
 
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L317)
+
 + Devuelve __True__ si la versión de __Python__ es 3.X
