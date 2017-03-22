@@ -15,15 +15,15 @@
                            ║  ├─┤││││  │├┤  │  ║╠═╣
                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴ ╚╝╩ ╩
 
-                                     v1.1.5
+                                     v1.1.6
 
 - - -
 
 ### Modo de Uso:
 
-+ Tienes que importar el módulo WinColor a tu Script: __`import WinColor`__, esto te permitirá usar los métodos: __`WinColor.color()`, `WinColor.rest()`, `WinColor.Dat()`__, etc...
++ Tienes que importar el módulo ___WinColor a tu Script___: __`import WinColor`__, esto te permitirá usar las ___funciones___: __`WinColor.color()`, `WinColor.rest()`, `WinColor.Dat()`__, etc...
   
-+ Para importar todo, se escribe de la siguiente manera y así se evitará escribir demasiado: __`from WinColor import *`__, de esta manera se podrá llamar a los métodos sin necesidad de especificar el nombre del módulo: __`WinColor.Dat()` ---> `Dat()`__
++ Para importar todo, se escribe de la siguiente manera y así se evitará escribir demasiado: __`from WinColor import *`__, de esta manera se podrá llamar las funciones sin necesidad de especificar el nombre del ___módulo___, osea: __`WinColor.Dat()` ---> `Dat()`__
 
 ---
 
@@ -51,7 +51,7 @@
 color("x0"), color("negro"), color("N")
 ```
     
-+ Lista De Colores:
++ ___Lista De Colores___:
 
 | Color            | Hex | Nombre        | Índice |
 |:-----------------|:---:|:-------------:|:------:|
@@ -120,7 +120,7 @@ color("x0"), color("negro"), color("N")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L135)
 
-+ La función __`rest()`__ Restaura al color por defecto de la ventana.
++ La función __`rest()`__ ___Restaura al color por defecto___ de la ventana.
 
 ---
 <a name="Inp"/>
@@ -148,7 +148,7 @@ xD = inp("Escribe Algo: ")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L158)
 
-+ Esta simple y a su vez practica función, permite añadir cuadros con símbolos, __[+], [-], [!],__ etc., para poder imprimir en pantalla con colores personalizados de forma rápida y practica.
++ Esta simple y a su vez practica función, permite añadir cuadros con ___símbolos___, __[+], [-], [!],__ etc., para poder imprimir en pantalla con colores personalizados de forma ___rápida y practica___.
   
 #### Modo de uso:
   
@@ -201,11 +201,11 @@ xD = inp("Escribe Algo: ")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L379)
 
-+ Permite escribir en pantalla de forma __oculta__, útil para escribir __contraseñas__.
++ Permite ___escribir en pantalla___ de forma __oculta__, útil para escribir __contraseñas__.
 
 #### Modo de Uso:
 
-+ Con esto, se imprimirá en pantalla el texto que se le pase a la función ___(Por defecto, imprime una cadena vacia)___ y permitirá escribir una cadena de manera ___oculta (para evitar a los curiosos)___ y ésta, se almacenará en una variable para poder utilizarla en el programa.
++ Con esto, se imprimirá en pantalla el texto que se le pase a la función ___(Por defecto, imprime una cadena vacia)___ y permitirá escribir una cadena de manera ___oculta (para evitar a los curiosos)___ y ésta, se almacenará en una variable para poder utilizarla en el ___Script___.
 
 ```py
 xD = Pass("Escribe la contraseña:")
@@ -231,7 +231,7 @@ HiddenCursor()
 ```python
 
 #~ Para ocultar.
-HiddenCursor("Hidden")
+HiddenCursor("Hide")
 
 #~ Para mostrar.
 HiddenCursor("Show")
@@ -244,16 +244,16 @@ HiddenCursor("Show")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L360)
 
-+ Cambia el tamaño de la ventana al antojo.
++ Cambia el ___tamaño de la ventana___ al antojo.
 
 #### Modo de Uso:
 
-+ Por Defecto pondra el tamaño de la ventana en __Ancho=82, Alto=55__
++ Por Defecto pondra el ___tamaño de la ventana___ en __Ancho=82, Alto=55__
 ```python
 WinSize()
 ```
 
-+ Pondra el tamaño de la ventana en __Ancho=50, Alto=25__
++ Pondra el ___tamaño de la ventana___ en __Ancho=50, Alto=25__
 ```python
 WinSize(50,25)
 ```
@@ -265,16 +265,16 @@ WinSize(50,25)
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L367)
 
-+ Mostrará Todos Método de Algún Módulo.
++ Mostrará Todos los ___Archivos___ Contenidos en Algún Módulo.
 
 #### Modo de Uso:
 
-+ Esto mostrará todos los archivos del __Módulo__: ___sys___
++ Esto mostrará todos los ___archivos___ del __Módulo__: ___sys___
 ```python
 ChkMod("sys")
 ```
 
-+ Esto mostrará todos los archivos del __Módulo__: ___os___
++ Esto mostrará todos los ___archivos___ del __Módulo__: ___os___
 ```python
 ChkMod("os")
 ```
@@ -286,7 +286,7 @@ ChkMod("os")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L36)
  
-+ La función __`Dat()`__ limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
++ La función __`Dat()`__ limpiará pantalla y mostrara el ___Nombre, Autor y Versión del Script___ y cerrará el programa.
 
 ---
 <a name="Clear"/>
@@ -295,7 +295,7 @@ ChkMod("os")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L342)
 
-+ Función que hace compatible __limpiar pantalla__ en cualquier Sistema Operativo (__Linux, Windows__, etc).
++ Función que hace compatible __limpiar pantalla__ en cualquier ___Sistema Operativo___ (__Linux, Windows__, etc).
 
 ---
 <a name="Flush"/>
@@ -315,7 +315,7 @@ ChkMod("os")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L287)
 
-+ Devuelve __True__ si el sistema operativo es __Windows__
++ Devuelve __True__ si el ___sistema operativo___ es __Windows__
 
 ---
 <a name="isL"/>
@@ -324,7 +324,7 @@ ChkMod("os")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L297)
 
-+ Devuelve __True__ si el sistema operativo es __Linux__
++ Devuelve __True__ si el ___sistema operativo___ es __Linux__
 
 ---
 <a name="isP2"/>
@@ -333,7 +333,7 @@ ChkMod("os")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L307)
 
-+ Devuelve __True__ si la versión de __Python__ es 2.X
++ Devuelve __True__ si la ___versión___ de __Python__ es 2.X
 
 ---
 <a name="isP3"/>
@@ -342,7 +342,7 @@ ChkMod("os")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L317)
 
-+ Devuelve __True__ si la versión de __Python__ es 3.X
++ Devuelve __True__ si la ___versión___ de __Python__ es 3.X
 
 ---
 <a name="isA"/>
@@ -351,4 +351,4 @@ ChkMod("os")
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L327)
 
-+ Devuelve __True__ si el ___Scritp___ se está ejecutando con _Permisos de Administrador_.
++ Devuelve __True__ si el ___Script___ se está ejecutando con _Permisos de Administrador_.
