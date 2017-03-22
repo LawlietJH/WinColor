@@ -2,7 +2,7 @@
 ## Pon Color A Tus Scripts de Python En Windows.
 
 - - -
-
+```diff
 
       ██╗    ██╗██╗███╗   ██╗ ██████╗ ██████╗ ██╗      ██████╗ ██████╗ 
       ██║    ██║██║████╗  ██║██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗
@@ -16,7 +16,7 @@
                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴ ╚╝╩ ╩
 
                                      v1.1.5
-
+```
 - - -
 
 ### Modo de Uso:
@@ -345,10 +345,10 @@ ChkMod("os")
 + Devuelve __True__ si la versión de __Python__ es 3.X
 
 ---
-<a name="Color"/>
+<a name="isA"/>
 
 ## isAdmin()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L89)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L327)
 
 + Devuelve __True__ si el ___Scritp___ se está ejecutando con _Permisos de Administrador_.
