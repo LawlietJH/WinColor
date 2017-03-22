@@ -15,7 +15,7 @@
                            ║  ├─┤││││  │├┤  │  ║╠═╣
                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴ ╚╝╩ ╩
 
-                                     v1.1.6
+                                     v1.1.7
 
 - - -
 
@@ -29,13 +29,13 @@
 
 ### Funciones Disponibles:
 
-| Principales         | Interacción       | Parametros		    | Extras              | Booleanas             |
-|:-------------------:|:-----------------:|:-------------------------:|:-------------------:|:---------------------:|
-| [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)     | [`isWindows()`](#isW) |
-| [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear) | [`isLinux()`](#isL)   |
-|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush) | [`isPyver2()`](#isP2) |
-|                     |                   |                           |                     | [`isPyver3()`](#isP3) |
-|                     |                   |                           |                     | [`isAdmin()`](#isA)   |
+| Principales         | Interacción           | Parametros		        | Extras              | Booleanas             |
+|:-------------------:|:---------------------:|:-------------------------:|:-------------------:|:---------------------:|
+| [`color()`](#Color) | [`inp()`](#Inp)       | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)     | [`isWindows()`](#isW) |
+| [`rest()`](#Rest)   | [`Mark()`](#Mark)     | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear) | [`isLinux()`](#isL)   |
+|                     | [`Pass()`](#Pass)     | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush) | [`isPyver2()`](#isP2) |
+|                     | [`Access()`](#Access) |                           |                     | [`isPyver3()`](#isP3) |
+|                     |                       |                           |                     | [`isAdmin()`](#isA)   |
 
 ---
 <a name="Color"/>
@@ -209,6 +209,52 @@ xD = inp("Escribe Algo: ")
 
 ```py
 xD = Pass("Escribe la contraseña:")
+```
+
+---
+<a name="Access"/>
+
+## Access()
+
++ Pide Una Contraseña y Devuelve __True__ Si la Contraseña que escriba el Usuario
+ Coincide Con la Indicada Que se le paso a la Función.
++ La Contraseña se Escribe de manera Oculta usando la funcion Pass()
+
+#### Modo de Uso:
+
++ Por defecto:
+
+    + Impresion en Pantalla: \n\n\t Pwd:
+    + Contraseña: xD
+   
+```
+Bool = Access()
+```
+
++ Pasando Una Cadena y una Contraseña en los argumentos para Imprimir en Pantalla:
+
+```
+# Pedirá una contraseña y si es la misma devolvera True.
+
+Pwd = "Dat"
+Bool = Access("\n\n\t Escribe La Contraseña: ", Pwd)
+
+```
+
++ Ejemplo:
+
+```
+Pwd = "Pass"
+
+while True:
+	
+	Acceso = Access("\n\n\t Contraseña: ", Pwd)
+
+	if Acceso == True:
+		print("\n\n\t [*] Contraseña Correcta.")
+		exit(0)
+	else:
+		print("\n\n\t [!] Contraseña Incorrecta!")
 ```
 
 ---
