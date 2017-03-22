@@ -17,8 +17,8 @@
 |:-------------------:|:-----------------:|:-------------------------:|:------------------:|:------------:|
 | [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)    | `isWindows()`|
 | [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear)| `isLinux()`  |
-|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | `flush()`  | `isPyver2()` |
-|                     |                   |                           |            | `isPyver3()` |
+|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush)| `isPyver2()` |
+|                     |                   |                           |                    | `isPyver3()` |
 
 ---
 <a name="Color"/>
@@ -281,8 +281,12 @@ ChkMod("os")
 + Función que hace compatible __limpiar pantalla__ en cualquier Sistema Operativo (__Linux, Windows__, etc).
 
 ---
+<a name="Flush"/>
 
 ## flush()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L153)
+
  + La función __`flush()`__ es una función ___auxiliar___ que ayudará a limpiar el buffer y hacer que imprimirá los colores correctamente en dado caso de alguna falla al imprimir en pantalla con algún color.
   
  + Para usar esta función simplemente se tiene que colocar el nombre __`flush()`__ antes de la función __`color()`__ con la que se tenga problemas al imprimir el color (si es que llegara a suceder, pero en verdad, dudo que pase).
