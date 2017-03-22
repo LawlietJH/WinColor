@@ -16,7 +16,7 @@
 | Principales         | Interacción       | Parametros				        | Extras             | Booleanas    |
 |:-------------------:|:-----------------:|:-------------------------:|:------------------:|:------------:|
 | [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)    | [`isWindows()`](#isW)|
-| [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear)| `isLinux()`  |
+| [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear)| [`isLinux()`](#isL)  |
 |                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | [`flush()`](#Flush)| `isPyver2()` |
 |                     |                   |                           |                    | `isPyver3()` |
 
@@ -304,6 +304,8 @@ ChkMod("os")
 <a name="isL"/>
 
 ## isLinux()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L297)
 
 + Devuelve __True__ si el sistema operativo es __Linux__
 
