@@ -42,7 +42,7 @@
 
 ## color()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L89)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L90)
 
 ### La función `color()` requiere una serie de parámetros, puede ser cualquiera de la siguiente lista:
 
@@ -118,7 +118,7 @@ color("x0"), color("negro"), color("N")
 
 ## rest()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L135)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L136)
 
 + La función __`rest()`__ ___Restaura al color por defecto___ de la ventana.
 
@@ -127,7 +127,7 @@ color("x0"), color("negro"), color("N")
 
 ## inp()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L338)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L357)
 
 + Función que hace compatible __escribir en pantalla en cualquier Versión de Python__.
 
@@ -146,7 +146,7 @@ xD = inp("Escribe Algo: ")
 
 ## Mark()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L158)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L159)
 
 + Esta simple y a su vez practica función, permite añadir cuadros con ___símbolos___, __[+], [-], [!],__ etc., para poder imprimir en pantalla con colores personalizados de forma ___rápida y practica___.
   
@@ -199,7 +199,7 @@ xD = inp("Escribe Algo: ")
 
 ## Pass()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L379)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L400)
 
 + Permite ___escribir en pantalla___ de forma __oculta__, útil para escribir __contraseñas__.
 
@@ -215,6 +215,8 @@ xD = Pass("Escribe la contraseña:")
 <a name="Access"/>
 
 ## Access()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L412)
 
 + Pide Una Contraseña y Devuelve __True__ Si la Contraseña que escriba el Usuario
  Coincide Con la Indicada Que se le paso a la Función.
@@ -262,7 +264,7 @@ while True:
 
 ## HiddenCursor()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L390)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L422)
 
 + __Oculta o Muestra el Puntero en Pantalla__.
 
@@ -288,7 +290,7 @@ HiddenCursor("Show")
 
 ## WinSize()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L360)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L365)
 
 + Cambia el ___tamaño de la ventana___ al antojo.
 
@@ -309,7 +311,7 @@ WinSize(50,25)
 
 ## ChkMod()
 
-[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L367)
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L372)
 
 + Mostrará Todos los ___Archivos___ Contenidos en Algún Módulo.
 
