@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.1.5
+#                                                                 1.1.6
 
 import ctypes
 import time
@@ -333,6 +333,11 @@ def isAdmin():
 		if xD == 1: return True
 		else: return False
 	
+	elif isLinux():
+		
+		if os.geteuid() != 0: return False
+		else: return True
+	
 	else:
 		return "Desconocido"
 
@@ -403,7 +408,7 @@ def Pass(Text=""):
 
 
 #~ Función Que Permite Esconder El Cursor de la Pantalla (La rayita que parpadea xD).
-def HiddenCursor(imp="Hidden"):
+def HiddenCursor(imp="Hide"):
 	
 	#~ imp = imp.title()		#Devuelve la cadena solo con la primera letra de cada palabra en mayuscula
 	imp = imp.capitalize()		#Devuelve la cadena solo con la primera letra de la primer palabra en mayuscula
@@ -439,7 +444,7 @@ def HiddenCursor(imp="Hidden"):
 			sys.stdout.flush()
 	
 		
-	if imp == "Hidden": hide_cursor()
+	if imp == "Hide": hide_cursor()
 	elif imp =="Show": show_cursor()
 	else: return
 
