@@ -13,15 +13,15 @@
 
 ### Funciones Disponibles:
 
-| Principales         | Interacción       | Parametros				        | Extras         | Booleanas    |
-|:-------------------:|:-----------------:|:-------------------------:|:--------------:|:------------:|
-| [`color()`](#color) | [`inp()`](#inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)| `isWindows()`|
-| [`rest()`](#rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | `Clear()`  | `isLinux()`  |
+| Principales         | Interacción       | Parametros				        | Extras             | Booleanas    |
+|:-------------------:|:-----------------:|:-------------------------:|:------------------:|:------------:|
+| [`color()`](#Color) | [`inp()`](#Inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)    | `isWindows()`|
+| [`rest()`](#Rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | [`Clear()`](#Clear)| `isLinux()`  |
 |                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | `flush()`  | `isPyver2()` |
 |                     |                   |                           |            | `isPyver3()` |
 
 ---
-<a name="color"/>
+<a name="Color"/>
 
 ## color()
 
@@ -97,7 +97,7 @@ color("x0"), color("negro"), color("N")
   ```
   
 ---
-<a name="rest"/>
+<a name="Rest"/>
 
 ## rest()
 
@@ -106,7 +106,7 @@ color("x0"), color("negro"), color("N")
 + La función __`rest()`__ Restaura al color por defecto de la ventana.
 
 ---
-<a name="inp"/>
+<a name="Inp"/>
 
 ## inp()
 
@@ -272,8 +272,11 @@ ChkMod("os")
 + La función __`Dat()`__ limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
 
 ---
+<a name="Clear"/>
 
 ## Clear()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L342)
 
 + Función que hace compatible __limpiar pantalla__ en cualquier Sistema Operativo (__Linux, Windows__, etc).
 
