@@ -246,6 +246,8 @@ WinSize(50,25)
 
 ## ChkMod()
 
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L367)
+
 + Mostrará Todos Método de Algún Módulo.
 
 #### Modo de Uso:
