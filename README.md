@@ -13,15 +13,16 @@
 
 ### Funciones Disponibles:
 
-| Principales         | Interacción       | Parametros				  | Extras     | Booleanas    |
-|:-------------------:|:-----------------:|:-------------------------:|:----------:|:------------:|
-| [`color()`](#color) | [`inp()`](#inp)   | [`HiddenCursor()`](#HiCu) | `Dat()`    | `isWindows()`|
+| Principales         | Interacción       | Parametros				        | Extras         | Booleanas    |
+|:-------------------:|:-----------------:|:-------------------------:|:--------------:|:------------:|
+| [`color()`](#color) | [`inp()`](#inp)   | [`HiddenCursor()`](#HiCu) | [`Dat()`](#Dat)| `isWindows()`|
 | [`rest()`](#rest)   | [`Mark()`](#Mark) | [`WinSize()`](#WinSize)   | `Clear()`  | `isLinux()`  |
-|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)                | `flush()`  | `isPyver2()` |
+|                     | [`Pass()`](#Pass) | [`ChkMod()`](#ChkMod)     | `flush()`  | `isPyver2()` |
 |                     |                   |                           |            | `isPyver3()` |
 
 ---
 <a name="color"/>
+
 ## color()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L89)
@@ -96,7 +97,8 @@ color("x0"), color("negro"), color("N")
   ```
   
 ---
-<a name="rest"/>  
+<a name="rest"/>
+
 ## rest()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L135)
@@ -105,6 +107,7 @@ color("x0"), color("negro"), color("N")
 
 ---
 <a name="inp"/>
+
 ## inp()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L338)
@@ -123,6 +126,7 @@ xD = inp("Escribe Algo: ")
 
 ---
 <a name="Mark"/>
+
 ## Mark()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L158)
@@ -175,6 +179,7 @@ xD = inp("Escribe Algo: ")
 ---
 
 <a name="Pass"/>
+
 ## Pass()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L379)
@@ -191,6 +196,7 @@ xD = Pass("Escribe la contraseña:")
 
 ---
 <a name="HiCu"/>
+
 ## HiddenCursor()
 
 [\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L390)
@@ -216,7 +222,10 @@ HiddenCursor("Show")
 
 ---
 <a name="WinSize"/>
+
 ## WinSize()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L360)
 
 + Cambia el tamaño de la ventana al antojo.
 
@@ -234,6 +243,7 @@ WinSize(50,25)
 
 ---
 <a name="ChkMod"/>
+
 ## ChkMod()
 
 + Mostrará Todos Método de Algún Módulo.
@@ -251,6 +261,7 @@ ChkMod("os")
 ```
 
 ---
+<a name="Dat"/>
 
 ## Dat()
  
