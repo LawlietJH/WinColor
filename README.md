@@ -266,6 +266,8 @@ ChkMod("os")
 <a name="Dat"/>
 
 ## Dat()
+
+[\[Código Fuente\]](https://github.com/LawlietJH/WinColor/blob/master/WinColor.py#L36)
  
 + La función __`Dat()`__ limpiará pantalla y mostrara el Nombre, Autor y Versión del Script y cerrará el programa.
 
