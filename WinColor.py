@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.1.7
+#                                                                 1.1.8
 
 import ctypes
 import time
@@ -37,7 +37,7 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("1.1.7")
+	Version = "\n\n\n{:^80}".format("1.1.8")
 	
 	return os.system("cls"), winsize(80,22),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
@@ -458,5 +458,24 @@ def HiddenCursor(imp="Hide"):
 	if imp == "Hide": hide_cursor()
 	elif imp =="Show": show_cursor()
 	else: return
-	
+
+
+
+#~ Función Que Limpia El Buffer (Hace Flush) Para Que los Input Aparescan En Limpio Siempre.
+#~ Ya Que Si Se Escribe A La 'Nada' Antes De Un Input, Todo Lo Escrito Aparecera En El Input.
+#~ Con Esta Función Se Evita Eso.
+def Imp():	# Limpia El Buffer (Flush)
+    
+    try:
+        
+        import msvcrt
+        
+        while msvcrt.kbhit(): msvcrt.getch()
+            
+    except ImportError:
+		
+        import sys, termios
+        
+        termios.tcflush(sys.stdin, termios.TCIOFLUSH)
+
 
