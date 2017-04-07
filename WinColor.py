@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.1.9
+#                                                                 1.2.0
 
 import ctypes
 import time
@@ -37,9 +37,9 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("v1.1.9")
+	Version = "\n\n\n{:^80}".format("v1.2.0")
 	
-	return os.system("cls"), winsize(80,24),\
+	return os.system("cls"), WinSize(80,24),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
 	       color("AZC"), print("\n\n", Autor), time.sleep(0.1),\
 	       color("RC"), print(Version), rest(),\
@@ -482,7 +482,7 @@ def Imp():	# Limpia El Buffer (Flush)
 
 
 # Abre Una Nueva Ventana Con Permisos De Administrador.
-def runAsAdmin(cmdLine=None):
+def runAsAdmin(Show="Show",cmdLine=None):
 	
 	import traceback, types
 	
@@ -496,6 +496,14 @@ def runAsAdmin(cmdLine=None):
 		
 		if os.name != 'nt': exit(0)
 		
+		if Show == "Hide": showCmd = win32con.SW_HIDE		# Abre El CMD en Modo Oculto.
+		elif Show == "Show": showCmd = win32con.SW_SHOWNORMAL	# Abre El CMD Normal.
+		else:
+			print("\n\n\n\t [!] El Parámetro " + Show + " En runAsAdmin() No Se Reconoce." +\
+				"\n\n\t     Usa 'Show' o 'Hide'." +\
+				"\n\n\t     Si No Escribes Ningún Parámetro, Por defecto se Usara 'Show'.")
+			exit(0)
+		
 		python_exe = sys.executable
 		
 		if cmdLine is None:
@@ -506,11 +514,8 @@ def runAsAdmin(cmdLine=None):
 		
 		params = " ".join(['"{}"'.format(x,) for x in cmdLine[1:]])
 		cmdDir = ''
-		showCmd = win32con.SW_SHOWNORMAL	# Abre El CMD Normal.
-		#~ showCmd = win32con.SW_HIDE		# Abre El CMD en Modo Oculto.
-		lpVerb = 'runas'  # Causa Elevación De Privilegios.
 		
-		#~ print("Running", cmd, params)
+		lpVerb = 'runas'  # Causa Elevación De Privilegios.
 		
 		# ShellExecute() no parece que nos permita obtener el PID o manejar el proceso,
 		# por lo que no podemos obtener nada útil de él. Por lo tanto,
@@ -533,15 +538,6 @@ def runAsAdmin(cmdLine=None):
 		procInfo = ShellExecuteEx(nShow=showCmd, fMask=shellcon.SEE_MASK_NOCLOSEPROCESS, lpVerb=lpVerb, lpFile=cmd, lpParameters=params)
 		#================================================================================================================================
 		
-		# Se Obtiene El Código De Salida Del Script, 0 Bien, 1 Mal.
-		#~ if wait:
-			#~ procHandle = procInfo['hProcess']
-			#~ obj = win32event.WaitForSingleObject(procHandle, win32event.INFINITE)
-			#~ rc = win32process.GetExitCodeProcess(procHandle)
-			#~ print("Process handle {} returned code {} ---> {}".format(procHandle, rc, obj))
-		#~ else:
-			#~ rc = None
-		
 		return False
 	
 	else: return True
@@ -549,13 +545,15 @@ def runAsAdmin(cmdLine=None):
 	#~ http://pt.stackoverflow.com/questions/6929/como-rodar-um-subprocess-com-permiss%C3%A3o-de-administrador
 
 
-# Datos De Prueba:
-#~ if runAsAdmin():
+#~ # Datos De Prueba:
+#~ if runAsAdmin("Show"):
 	
 	#~ print("\n\n\n\t [+] Tengo Permisos De Administrador B)")
 	#~ os.system("Pause")
+	#~ Dat()
 
 #~ else:
 	
 	#~ print("\n\n\n\t [!] No Tengo Permisos De Administrador :/")
 	#~ os.system("Pause")
+	#~ Dat()
