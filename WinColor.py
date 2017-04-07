@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.1.8
+#                                                                 1.1.9
 
 import ctypes
 import time
@@ -23,23 +23,23 @@ BWC = r"""
                       ║║║  │  │││   ║   │ │ │   │ │ ├┬┘
                       ╚╩╝  ┴  ┘└┘   ╚═╝ └─┘ ┴─┘ └─┘ ┴└─
 """
-#~ Fuente: Calvin S, Página: http://patorjk.com/software/taag
+# Fuente: Calvin S, Página: http://patorjk.com/software/taag
 
 BA = r"""
                            ╦  ┌─┐┬ ┬┬  ┬┌─┐┌┬┐ ╦╦ ╦
                            ║  ├─┤││││  │├┤  │  ║╠═╣
                            ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴ ╚╝╩ ╩
 """
-#~ Fuente: Calvin S, Página: http://patorjk.com/software/taag
+# Fuente: Calvin S, Página: http://patorjk.com/software/taag
 
 
 def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("1.1.8")
+	Version = "\n\n\n{:^80}".format("v1.1.9")
 	
-	return os.system("cls"), winsize(80,22),\
+	return os.system("cls"), winsize(80,24),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
 	       color("AZC"), print("\n\n", Autor), time.sleep(0.1),\
 	       color("RC"), print(Version), rest(),\
@@ -48,7 +48,7 @@ def Dat():
 #________________________________________________________________________
 #________________________________________________________________________
 
-#~ Constantes de la API de Windows.
+# Constantes de la API de Windows.
 STD_OUTPUT_HANDLE = -11
 
 #_______________ Colores _______________
@@ -72,7 +72,7 @@ xF   = 0x000F   # Color Blanco Brillante.
 #~ _______________________________________
 
 
-#~ Función que reinicia al color original
+# Función que reinicia al color original
 def get_csbi_attributes(handle):
     #~ Basado en winconsole.py de IPython
     
@@ -86,7 +86,7 @@ def get_csbi_attributes(handle):
     return wattr
 
 
-#~ Función Que Indica En Donde Iniciará El Color.
+# Función Que Indica En Donde Iniciará El Color.
 def color(ColorLetra):
 	
 	flush()
@@ -132,7 +132,7 @@ def color(ColorLetra):
 
 
 
-#~ Función Que Indica En Donde Terminará El Color.
+# Función Que Indica En Donde Terminará El Color.
 def rest():
 	
 	flush()
@@ -143,19 +143,19 @@ def rest():
 
 
 
-#~ Variables que simplifican el nombre.
+# Variables que simplifican el nombre.
 handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
 reset = get_csbi_attributes(handle)
 
 
 
-#~ Función que sirve para poder poner colores en la misma linea
+# Función que sirve para poder poner colores en la misma linea
 def flush():
 	return sys.stdout.flush()
 
 
 	
-#~ Función para mostrar recuadro [+], [-], [!], [¡], [*], [~], [#], [&], [?], [ ] con colores
+# Función para mostrar recuadro [+], [-], [!], [¡], [*], [~], [#], [&], [?], [ ] con colores
 def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 	
 	if (Simbolo == "+") or (Simbolo == ">+"):
@@ -283,7 +283,7 @@ def Mark(Simbolo = " ", Color2 = None, Color1 = None):
 
 
 
-#~ Función Que Comprueba si el SO es Windows, Devuelve TRUE/FALSE
+# Función Que Comprueba si el SO es Windows, Devuelve TRUE/FALSE
 def isWindows():
 	
 	osver = os.popen("ver").read()
@@ -293,7 +293,7 @@ def isWindows():
 
 
 
-#~ Función Que Comprueba si el SO es Linux, Devuelve TRUE/FALSE
+# Función Que Comprueba si el SO es Linux, Devuelve TRUE/FALSE
 def isLinux():
 	
 	osver = os.popen("ver").read()
@@ -303,7 +303,7 @@ def isLinux():
 
 
 
-#~ Función Que Comprueba si es Python Versión 2, Devuelve TRUE/FALSE
+# Función Que Comprueba si es Python Versión 2, Devuelve TRUE/FALSE
 def isPyver2():
 	
 	xD=sys.version[0]
@@ -313,7 +313,7 @@ def isPyver2():
 
 
 
-#~ Función Que Comprueba si es Python Versión 3, Devuelve TRUE/FALSE
+# Función Que Comprueba si es Python Versión 3, Devuelve TRUE/FALSE
 def isPyver3():
 	
 	xD=sys.version[0]
@@ -323,7 +323,7 @@ def isPyver3():
 
 
 
-#~ Función Que Permite Saber Si Se Tienen Permisos de Administrador.
+# Función Que Permite Saber Si Se Tienen Permisos de Administrador.
 def isAdmin():
 	
 	if isWindows():
@@ -343,7 +343,7 @@ def isAdmin():
 
 
 
-#~ Función Que Permite Limpiar Pantalla Compatible Con Diferentes Sistemas Operativos (SO).
+# Función Que Permite Limpiar Pantalla Compatible Con Diferentes Sistemas Operativos (SO).
 def Clear():
 	
     if os.name == "nt" or os.name == "ce" or os.name == "dos": #~ Windows(nt)\Windows(ce)\DOS
@@ -353,7 +353,7 @@ def Clear():
 
 
 
-#~ Función Que Permite Imprimir En Pantalla Compatible Con Python Versión 2 y 3, Devuelve Cadena
+# Función Que Permite Imprimir En Pantalla Compatible Con Python Versión 2 y 3, Devuelve Cadena
 def inp(inp):
 	
 	if isPyver3(): return input(inp)
@@ -361,14 +361,14 @@ def inp(inp):
 
 
 
-#~ Función Que Permite Cambiar el Tamaño de la Pantalla.
+# Función Que Permite Cambiar el Tamaño de la Pantalla.
 def WinSize(Ancho=82, Alto=55):
 	
 	os.system("mode con: cols={} lines={}".format(Ancho, Alto))
 
 
 
-#~ Función Que Permite Checar Un Módulo.
+# Función Que Permite Checar Un Módulo.
 def ChkMod(nombre):
 	
 	import pydoc
@@ -395,8 +395,8 @@ def ChkMod(nombre):
 
 
 
-#~ Función Que Permite Esconder El Texto de la Pantalla.
-#~ Para escribrir por ejemplo contraseñas y evitar a los curiosos.
+# Función Que Permite Esconder El Texto de la Pantalla.
+# Para escribrir por ejemplo contraseñas y evitar a los curiosos.
 def Pass(Text=""):
 	
 	from getpass import getpass as pwd
@@ -407,8 +407,8 @@ def Pass(Text=""):
 
 
 
-#~ Funcion Que pide escribir una contraseña y si Coincide con la Contraseña
-#~ Que fue pasada a la función con los argumentos, devolvera True.
+# Funcion Que pide escribir una contraseña y si Coincide con la Contraseña
+# Que fue pasada a la función con los argumentos, devolvera True.
 def Access(String="\n\n\t Pwd: ", Pwd = "xD"):
 	
 	Cadena = Pass(String)
@@ -418,7 +418,7 @@ def Access(String="\n\n\t Pwd: ", Pwd = "xD"):
 
 
 
-#~ Función Que Permite Esconder El Cursor de la Pantalla (La rayita que parpadea xD).
+# Función Que Permite Esconder El Cursor de la Pantalla (La rayita que parpadea xD).
 def HiddenCursor(imp="Hide"):
 	
 	#~ imp = imp.title()		#Devuelve la cadena solo con la primera letra de cada palabra en mayuscula
@@ -461,9 +461,9 @@ def HiddenCursor(imp="Hide"):
 
 
 
-#~ Función Que Limpia El Buffer (Hace Flush) Para Que los Input Aparescan En Limpio Siempre.
-#~ Ya Que Si Se Escribe A La 'Nada' Antes De Un Input, Todo Lo Escrito Aparecera En El Input.
-#~ Con Esta Función Se Evita Eso.
+# Función Que Limpia El Buffer (Hace Flush) Para Que los Input Aparescan En Limpio Siempre.
+# Ya Que Si Se Escribe A La 'Nada' Antes De Un Input, Todo Lo Escrito Aparecera En El Input.
+# Con Esta Función Se Evita Eso.
 def Imp():	# Limpia El Buffer (Flush)
     
     try:
@@ -479,3 +479,83 @@ def Imp():	# Limpia El Buffer (Flush)
         termios.tcflush(sys.stdin, termios.TCIOFLUSH)
 
 
+
+
+# Abre Una Nueva Ventana Con Permisos De Administrador.
+def runAsAdmin(cmdLine=None):
+	
+	import traceback, types
+	
+	if isAdmin() == False:
+		
+		#~ os.system("pip install pypiwin32 > Nul")
+		
+		import win32api, win32con, win32event, win32process
+		from win32com.shell.shell import ShellExecuteEx
+		from win32com.shell import shellcon
+		
+		if os.name != 'nt': exit(0)
+		
+		python_exe = sys.executable
+		
+		if cmdLine is None:
+			cmdLine = [python_exe] + sys.argv
+		elif type(cmdLine) not in (types.TupleType,types.ListType): exit(0)
+		
+		cmd = '"{}"'.format(cmdLine[0],)
+		
+		params = " ".join(['"{}"'.format(x,) for x in cmdLine[1:]])
+		cmdDir = ''
+		showCmd = win32con.SW_SHOWNORMAL	# Abre El CMD Normal.
+		#~ showCmd = win32con.SW_HIDE		# Abre El CMD en Modo Oculto.
+		lpVerb = 'runas'  # Causa Elevación De Privilegios.
+		
+		#~ print("Running", cmd, params)
+		
+		# ShellExecute() no parece que nos permita obtener el PID o manejar el proceso,
+		# por lo que no podemos obtener nada útil de él. Por lo tanto,
+		# el más complejo ShellExecuteEx() debe ser utilizado.
+		
+		#================================================================================================================================
+		# Método 1: Abrirá Una Ventana Con Permisos De Administrador
+		#           y La Ventana Anterior Continuará La Ejecución Normal Sin Detenerse.
+		
+		# Ventana Con Permisos De Admin.
+		#~ procHandle = win32api.ShellExecute(0, lpVerb, cmd, params, cmdDir, showCmd)
+		#================================================================================================================================
+		
+		#================================================================================================================================
+		# Método 2: Abrira Una Ventana Con Permisos De Administrador
+		#           y Pausará La Ventana Anterior Hasta Que Se Cierre La Ventana
+		#           Nueva Que Tiene Ya Permisos De Administrador.
+		
+		# Ventana Con Permisos De Admin.
+		procInfo = ShellExecuteEx(nShow=showCmd, fMask=shellcon.SEE_MASK_NOCLOSEPROCESS, lpVerb=lpVerb, lpFile=cmd, lpParameters=params)
+		#================================================================================================================================
+		
+		# Se Obtiene El Código De Salida Del Script, 0 Bien, 1 Mal.
+		#~ if wait:
+			#~ procHandle = procInfo['hProcess']
+			#~ obj = win32event.WaitForSingleObject(procHandle, win32event.INFINITE)
+			#~ rc = win32process.GetExitCodeProcess(procHandle)
+			#~ print("Process handle {} returned code {} ---> {}".format(procHandle, rc, obj))
+		#~ else:
+			#~ rc = None
+		
+		return False
+	
+	else: return True
+	
+	#~ http://pt.stackoverflow.com/questions/6929/como-rodar-um-subprocess-com-permiss%C3%A3o-de-administrador
+
+
+# Datos De Prueba:
+#~ if runAsAdmin():
+	
+	#~ print("\n\n\n\t [+] Tengo Permisos De Administrador B)")
+	#~ os.system("Pause")
+
+#~ else:
+	
+	#~ print("\n\n\n\t [!] No Tengo Permisos De Administrador :/")
+	#~ os.system("Pause")
