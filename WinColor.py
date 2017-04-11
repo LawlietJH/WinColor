@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.2.0
+#                                                                 1.2.1
 
 import ctypes
 import time
@@ -37,7 +37,7 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("v1.2.0")
+	Version = "\n\n\n{:^80}".format("v1.2.1")
 	
 	return os.system("cls"), WinSize(80,24),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
@@ -488,11 +488,38 @@ def runAsAdmin(Show="Show",cmdLine=None):
 	
 	if isAdmin() == False:
 		
-		#~ os.system("pip install pypiwin32 > Nul")
+		#=======================================================================
+	
+		def Chk_Dep():
+			
+			try:
+				import win32api
+				
+			except ModuleNotFoundError:
+				print("\n\n\t[!] Instalando Dependencias...\n\n\t\t")
+				os.system("Title Instalando pypiwin32 && pip install pypiwin32 > Nul && cls && Title Pandoraz.py            By: LawlietJH")
+				
+			except Exception as ex:
+				print( type(ex).__name__ )		#Ver cuando ocurre un error y poder añadirlo a las ecepciones, y no cierre el programa.
 		
-		import win32api, win32con, win32event, win32process
-		from win32com.shell.shell import ShellExecuteEx
-		from win32com.shell import shellcon
+		Chk_Dep()				#~ Se instala el módulo keyboard si este no esta instalado.
+		try:
+			import win32api, win32con, win32event, win32process	# Se Importan Módulos de pypiwin32.
+			from win32com.shell.shell import ShellExecuteEx
+			from win32com.shell import shellcon
+		except:					# Si Hay Algún Error Significa Que No Se Instaló Correctamente.
+			print("\n\n   No se pudo instalar correctamente el Módulo 'pypiwin32'.")
+			print("\n   Revise Su Conexión o Instale El Módulo Manualmente Desde Consola Con:")
+			print("\n\t 'pip install keyboard'   o   ' pip3 install keyboard'")
+			
+			try:
+				os.system("Pause > Nul")
+			except KeyboardInterrupt: pass
+			
+			Dat()
+			Salir(0)
+		
+		#=======================================================================
 		
 		if os.name != 'nt': exit(0)
 		
@@ -545,7 +572,67 @@ def runAsAdmin(Show="Show",cmdLine=None):
 	#~ http://pt.stackoverflow.com/questions/6929/como-rodar-um-subprocess-com-permiss%C3%A3o-de-administrador
 
 
-#~ # Datos De Prueba:
+
+#=======================================================================
+
+
+
+# Abre Una Nueva Ventana Para Ejecutar Otro Script.
+def Run(Programa=""):
+	
+	#=======================================================================
+	
+	def Chk_Dep():
+		
+		try:
+			import win32api
+			
+		except ModuleNotFoundError:
+			print("\n\n\t[!] Instalando Dependencias...\n\n\t\t")
+			os.system("Title Instalando pypiwin32 && pip install pypiwin32 > Nul && cls && Title Pandoraz.py            By: LawlietJH")
+			
+		except Exception as ex:
+			print( type(ex).__name__ )		#Ver cuando ocurre un error y poder añadirlo a las ecepciones, y no cierre el programa.
+	
+	Chk_Dep()				#~ Se instala el módulo keyboard si este no esta instalado.
+	try:
+		import win32api, win32con, win32event, win32process	# Se Importan Módulos de pypiwin32.
+		from win32com.shell.shell import ShellExecuteEx
+		from win32com.shell import shellcon
+	except:					# Si Hay Algún Error Significa Que No Se Instaló Correctamente.
+		print("\n\n   No se pudo instalar correctamente el Módulo 'pypiwin32'.")
+		print("\n   Revise Su Conexión o Instale El Módulo Manualmente Desde Consola Con:")
+		print("\n\t 'pip install keyboard'   o   ' pip3 install keyboard'")
+		
+		try:
+			os.system("Pause > Nul")
+		except KeyboardInterrupt: pass
+		
+		Dat()
+		Salir(0)
+	
+	#=======================================================================
+	
+	import traceback, types
+	
+	showCmd = win32con.SW_SHOWNORMAL
+	cmd = Programa
+	params = ''
+	cmdDir = ''
+	lpVerb = ''
+	
+	procHandle = win32api.ShellExecute(0, lpVerb, cmd, params, cmdDir, showCmd)
+	#~ procInfo = ShellExecuteEx(nShow=showCmd, fMask=shellcon.SEE_MASK_NOCLOSEPROCESS, lpVerb=lpVerb, lpFile=cmd, lpParameters=params)
+	
+	#~ http://pt.stackoverflow.com/questions/6929/como-rodar-um-subprocess-com-permiss%C3%A3o-de-administrador
+
+
+
+#=======================================================================
+
+
+
+# Datos De Prueba:
 #~ if runAsAdmin("Show"):
 	
 	#~ print("\n\n\n\t [+] Tengo Permisos De Administrador B)")
@@ -555,5 +642,6 @@ def runAsAdmin(Show="Show",cmdLine=None):
 #~ else:
 	
 	#~ print("\n\n\n\t [!] No Tengo Permisos De Administrador :/")
+	#~ Run("Info.py")
 	#~ os.system("Pause")
 	#~ Dat()
