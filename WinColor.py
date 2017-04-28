@@ -10,7 +10,7 @@
 #     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 #                                                                     
 #                                                         By: LawlietJH
-#                                                                 1.2.1
+#                                                                 1.2.2
 
 import ctypes
 import time
@@ -37,7 +37,7 @@ def Dat():
 	
 	Nombre = BWC
 	Autor = BA
-	Version = "\n\n\n{:^80}".format("v1.2.1")
+	Version = "\n\n\n{:^80}".format("v1.2.2")
 	
 	return os.system("cls"), WinSize(80,24),\
 	       color("VC"), print("\n\n", BWC), time.sleep(0.1),\
@@ -458,6 +458,8 @@ def HiddenCursor(imp="Hide"):
 	if imp == "Hide": hide_cursor()
 	elif imp =="Show": show_cursor()
 	else: return
+	
+	# http://stackoverflow.com/questions/5174810/how-to-turn-off-blinking-cursor-in-command-window
 
 
 
@@ -471,13 +473,41 @@ def Imp():	# Limpia El Buffer (Flush)
         import msvcrt
         
         while msvcrt.kbhit(): msvcrt.getch()
-            
+        
     except ImportError:
 		
         import sys, termios
         
         termios.tcflush(sys.stdin, termios.TCIOFLUSH)
 
+
+
+def Progreso(x, Total):
+	
+	TamBar = 30
+	Progreso = (x * 100) / Total
+	Actual = x / Total
+	
+	TiempoTransc = int(time.clock()) + 1
+	BarraAct = int(Actual * TamBar)
+	
+	bar = "\r Progreso: {:.2f}%".format(Progreso)
+	bar += ' |' + '█'.join(['' for _ in range(BarraAct)])  # Imprimir Progreso.
+	bar += ' '.join(['' for _ in range(int(TamBar - BarraAct))]) + '|'
+	bar += " [" + Tiempo((Total - x) * (TiempoTransc / x))  + "] "	# Imprimir Tiempo Restante.
+	
+	sys.stdout.write(bar)
+
+
+
+def Tiempo(sec):
+	
+	if sec >= 3600:  # Convierte a Horas
+		return '{0:d} hora(s)'.format(int(sec / 3600))
+	elif sec >= 60:  # Convierte a Minutos
+		return '{0:d} minuto(s)'.format(int(sec / 60))
+	else:            # Sin Conversión
+		return '{0:d} segundo(s)'.format(int(sec))
 
 
 
